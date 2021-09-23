@@ -20,12 +20,17 @@ const eslint = require('gulp-eslint');
 
 const ghPages = require('gulp-gh-pages');
 
+// const deploy =  () => {
+//   return gulp.src('./build/**/*')
+//     .pipe(ghPages());
+// }
+
 gulp.task('deploy', function() {
-  return gulp.src('./build/**/*')
-    .pipe(ghPages());
+    return gulp.src(['build/**/*'])
+        .pipe(ghPages());
 });
 
-exports.deploy = deploy;
+// exports.deploy = deploy;
 
 const jslint =  () => {
   return gulp.src(['source/js/*.js'])
