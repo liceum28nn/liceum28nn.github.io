@@ -1,6 +1,6 @@
 const gulp = require("gulp");
 const plumber = require("gulp-plumber");
-const less = require("gulp-less");
+const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const csso = require("postcss-csso");
 const postcssUrl = require("postcss-url");
@@ -16,48 +16,16 @@ const webp = require("gulp-webp");
 const svgSprite = require("gulp-svg-sprite");
 const del = require("del");
 
-const eslint = require('gulp-eslint');
-
-const ghPages = require('gulp-gh-pages');
-
-// const deploy =  () => {
-//   return gulp.src('./build/**/*')
-//     .pipe(ghPages());
-// }
-
-gulp.task('deploy', function() {
-    return gulp.src(['build/**/*'])
-        .pipe(ghPages());
-});
-
-// exports.deploy = deploy;
-
-const jslint =  () => {
-  return gulp.src(['source/js/*.js'])
-  // eslint() attaches the lint output to the "eslint" property
-  // of the file object so it can be used by other modules.
-  .pipe(eslint())
-  // eslint.format() outputs the lint results to the console.
-  // Alternatively use eslint.formatEach() (see Docs).
-  .pipe(eslint.format())
-  // To have the process exit with an error code (1) on
-  // lint error, return the stream and pipe to failAfterError last.
-  .pipe(eslint.failAfterError())
-  .pipe(gulp.dest("build/js"))
-}
-
-exports.jslint = jslint;
-
 // Styles
 
 const styles = () => {
-  return gulp.src("source/less/style.less", { sourcemaps: true })
+  return gulp.src("source/sass/*.scss", { sourcemaps: true })
     .pipe(plumber())
     .pipe(postcss([
       postcssImport(),
       postcssUrl(),
     ], { syntax: postScss }))
-    .pipe(less())
+    .pipe(sass())
     .pipe(postcss([
       autoprefixer(),
       csso()
@@ -114,7 +82,7 @@ const copyImages = () => {
     .pipe(gulp.dest("build/img"))
 }
 
-exports.copyImages = copyImages;
+exports.images = copyImages;
 
 // WebP
 
@@ -196,7 +164,7 @@ const reload = (done) => {
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series(styles));
+  gulp.watch("source/sass/**/*.scss", gulp.series(styles));
   gulp.watch("source/js/*.js", gulp.series(scripts, reload));
   gulp.watch("source/*.html", gulp.series(html, reload));
   gulp.watch("source/icons/**/*.svg", gulp.series(sprite, reload));
