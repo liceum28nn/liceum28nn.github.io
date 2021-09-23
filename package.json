@@ -10,7 +10,7 @@
     "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
     "test-html": "npm run editorconfig && npm run stylelint",
     "build": "gulp styles",
-    "testh": "npm run editorconfig && npm run stylelint && w3c-html-validator source",
+    "test": "npm run editorconfig && npm run stylelint && w3c-html-validator source"
   },
   "browserslist": [
     "last 2 versions",
@@ -18,8 +18,6 @@
     "not ie <= 11"
   ],
   "editorconfig-cli": [
-    "*.json",
-    "*.js",
     "source/*.html",
     "source/js/**/*.js",
     "source/img/**/*.svg",
@@ -50,6 +48,7 @@
     "eslint": "^7.32.0",
     "eslint-config-htmlacademy": "^4.0.2",
     "gulp": "^4.0.2",
+    "gulp-eslint": "^6.0.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-less": "^5.0.0",
     "gulp-libsquoosh": "^1.0.12",
