@@ -12,3 +12,4 @@ source/less/*.css
 source/less/*.map
 Thumbs.db
 build
+.publish

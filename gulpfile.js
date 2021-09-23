@@ -16,6 +16,17 @@ const webp = require("gulp-webp");
 const svgSprite = require("gulp-svg-sprite");
 const del = require("del");
 
+
+
+const ghPages = require('gulp-gh-pages');
+
+const deploy = (done) => {
+  return gulp.src('./build/**/*')
+    .pipe(ghPages());
+}
+
+exports.deploy = deploy;
+
 // Styles
 
 const styles = () => {
@@ -186,6 +197,8 @@ const build = gulp.series(
 );
 
 exports.build = build;
+
+
 
 // Default
 
