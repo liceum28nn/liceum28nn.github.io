@@ -1,1 +1,0 @@
-{"version":3,"sources":["global/variable.less","style.css","blocks/header.less"],"names":[],"mappings":"AAAA,MACE,eAAA,CACA,eCCF,CCHA,QACE,kBDKF","file":"style.min.css","sourcesContent":[":root {\n  --white: #ffffff;\n  --black: #000000;\n}\n",":root {\n  --white: #ffffff;\n  --black: #000000;\n}\n.header {\n  color: var(--white);\n}\n",".header {\n  color: var(--white);\n}\n"]}
