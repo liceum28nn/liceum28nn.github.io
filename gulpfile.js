@@ -18,6 +18,15 @@ const del = require("del");
 
 const eslint = require('gulp-eslint');
 
+const ghPages = require('gulp-gh-pages');
+
+gulp.task('deploy', function() {
+  return gulp.src('./build/**/*')
+    .pipe(ghPages());
+});
+
+exports.deploy = deploy;
+
 const jslint =  () => {
   return gulp.src(['source/js/*.js'])
   // eslint() attaches the lint output to the "eslint" property
