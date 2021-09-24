@@ -1,6 +1,6 @@
 const gulp = require("gulp");
 const plumber = require("gulp-plumber");
-const sass = require("gulp-sass");
+const less = require("gulp-less");
 const postcss = require("gulp-postcss");
 const csso = require("postcss-csso");
 const postcssUrl = require("postcss-url");
@@ -30,13 +30,13 @@ exports.deploy = deploy;
 // Styles
 
 const styles = () => {
-  return gulp.src("source/sass/*.scss", { sourcemaps: true })
+  return gulp.src("source/less/*.less", { sourcemaps: true })
     .pipe(plumber())
     .pipe(postcss([
       postcssImport(),
       postcssUrl(),
     ], { syntax: postScss }))
-    .pipe(sass())
+    .pipe(less())
     .pipe(postcss([
       autoprefixer(),
       csso()
@@ -57,7 +57,9 @@ exports.styles = styles;
 const html = () => {
   return gulp.src("source/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("build"))
+    .pipe(sync.stream())
+
 }
 
 exports.html = html;
@@ -175,7 +177,7 @@ const reload = (done) => {
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series(styles));
+  gulp.watch("source/less/**/*.less", gulp.series(styles));
   gulp.watch("source/js/*.js", gulp.series(scripts, reload));
   gulp.watch("source/*.html", gulp.series(html, reload));
   gulp.watch("source/icons/**/*.svg", gulp.series(sprite, reload));
@@ -198,10 +200,7 @@ const build = gulp.series(
 
 exports.build = build;
 
-
-
 // Default
-
 
 exports.default = gulp.series(
   clean,
