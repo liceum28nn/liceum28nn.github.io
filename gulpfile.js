@@ -132,7 +132,8 @@ const copy = (done) => {
     "source/*.ico",
     "source/img/**/*.svg",
     "source/favicon/*",
-    "source/manifest.webmanifest"
+    "source/manifest.webmanifest",
+    "source/js/**/*.json"
   ], {
     base: "source"
   })
@@ -178,7 +179,7 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
-  gulp.watch("source/js/*.js", gulp.series(scripts, reload));
+  gulp.watch("source/js/*.js", gulp.series(scripts));
   gulp.watch("source/*.html", gulp.series(html, reload));
   gulp.watch("source/icons/**/*.svg", gulp.series(sprite, reload));
 }

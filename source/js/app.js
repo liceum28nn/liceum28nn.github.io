@@ -1,18 +1,21 @@
-let navMenu = document.querySelector(".nav-menu");
-let navToggle = document.querySelector(".nav-menu__toggle");
 
-navMenu.classList.remove("nav-menu--nojs");
-navMenu.classList.add("nav-menu--closed");
+function loadJSON(name) {
+  let xhr = new XMLHttpRequest();
 
-navToggle.addEventListener("click", function() {
-  if (navMenu.classList.contains("nav-menu--closed")) {
-    navMenu.classList.remove("nav-menu--closed");
-    navMenu.classList.add("nav-menu--opened");
+    xhr.open('GET', name , false);
+    xhr.send();
+    if (xhr.status != 200) {
+  // обработать ошибку
+  alert('Ошибка ' + xhr.status + ': ' + xhr.statusText);
   } else {
-    navMenu.classList.add("nav-menu--closed");
-    navMenu.classList.remove("nav-menu--opened");
+  // вывести результат
+  return xhr.responseText;
+
   }
-});
-//mifomen
-let map = document.querySelector(".contacts__map");
-map.classList.remove("page__visually-hidden");
+}
+
+
+
+let allLessons = JSON.parse(loadJSON("js/lessons.json"))
+
+console.log(allLessons)
