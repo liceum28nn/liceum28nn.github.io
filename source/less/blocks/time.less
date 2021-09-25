@@ -1,0 +1,48 @@
+.time {
+  opacity: 1;
+  display: grid;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  // grid-template-columns: 1fr 1fr;
+  // grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "a a a"
+    "d e f";
+
+  &__now {
+    grid-area: a;
+  }
+
+  &__hours {
+    grid-area: a;
+
+    &::after {
+      content: ":";
+    }
+  }
+
+  &__minutes {
+    grid-area: b;
+
+    &::after {
+      content: ":";
+    }
+  }
+
+  &__seconds {
+    grid-column: c;
+  }
+
+  &__days {
+    grid-area: d;
+  }
+
+  &__month {
+    grid-area: e;
+  }
+
+  &__year {
+    grid-area: f;
+  }
+}
