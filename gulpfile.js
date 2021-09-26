@@ -66,9 +66,24 @@ exports.html = html;
 
 // Scripts
 
-const scripts = () => {
+const scripts-f = () => {
   return gulp.src("source/js/*.js")
     .pipe(terser())
+    .pipe(
+      rename({
+        extname: ".min.js"
+      })
+    )
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
+}
+
+exports.scripts-f = scripts-f;
+
+
+const scripts = () => {
+  return gulp.src("source/js/*.js")
+    // .pipe(terser())
     .pipe(
       rename({
         extname: ".min.js"

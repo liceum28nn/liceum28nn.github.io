@@ -4,32 +4,9 @@ function getCorrectTime() {
   nowYear.textContent = nowTime.getFullYear();
 
   const nowMonth = document.querySelector('.js-month');
-  if (nowTime.getMonth()===0) {
-    nowMonth.textContent = 'январь';
-  } else { if (nowTime.getMonth()===1) {
-    nowMonth.textContent = 'февраль';
-  } else if (nowTime.getMonth()===2) {
-    nowMonth.textContent = 'март';
-  } else if (nowTime.getMonth()===3) {
-    nowMonth.textContent = 'апрель';
-  } else if (nowTime.getMonth()===4) {
-    nowMonth.textContent = 'май';
-  } else if (nowTime.getMonth()===5) {
-    nowMonth.textContent = 'июнь';
-  } else if (nowTime.getMonth()===6) {
-    nowMonth.textContent = 'июль';
-  } else if (nowTime.getMonth()===7) {
-    nowMonth.textContent = 'август';
-  } else if (nowTime.getMonth()===8) {
-    nowMonth.textContent = 'сентябрь';
-  } else if (nowTime.getMonth()===9) {
-    nowMonth.textContent = 'октябрь';
-  } else if (nowTime.getMonth()===10) {
-    nowMonth.textContent = 'ноябрь';
-  } else if (nowTime.getMonth()===11) {
-    nowMonth.textContent = 'декабрь';
-  }
-  }
+
+  let months = ['январь','февраль','март','апрель','май','июнь','июль','август','сентябрь','октябрь','ноябрь','декабрь']
+  nowMonth.textContent = months[nowTime.getMonth() - 1];
 
   const nowDay = document.querySelector('.js-day');
   nowDay.textContent = nowTime.getDate();
@@ -69,16 +46,15 @@ const corretTime = setInterval(function time() {
 
 function loadJSON(name) {
   const xhr = new XMLHttpRequest();
-
   xhr.open('GET', name , false);
   xhr.send();
   if (xhr.status != 200) {
-  // обработать ошибку
-  alert('Ошибка ' + xhr.status + ': ' + xhr.statusText);
-} else {
-  // вывести результат
-  return xhr.responseText;
-}
+    // обработать ошибку
+    alert('Ошибка ' + xhr.status + ': ' + xhr.statusText);
+  } else {
+    // вывести результат
+    return xhr.responseText;
+  }
 }
 
 const allLessons = JSON.parse(loadJSON('js/lessons.json'))

@@ -38,8 +38,8 @@
     "deploy": "gh-pages -d build",
     "start": "gulp",
     "start-js": "browser-sync start --no-ui --server --no-online --no-ghost-mode --no-inject-changes --ss \"./build\" --files \"source/js/**/*.js\"",
-    "test-js": "eslint source/js/",
-    "tests": "npm run test-js && npm run start-js"
+    "debug-js": "eslint source/js/",
+    "tests": "npm run build && npm run start-js"
   },
   "browserslist": [
     "last 2 versions",
