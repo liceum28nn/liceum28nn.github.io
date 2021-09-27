@@ -6,14 +6,16 @@
   right: 5%;
   // grid-template-columns: 1fr 1fr;
   // grid-template-rows: 1fr 1fr;
+  grid-column-gap: 5px;
   grid-template-areas:
     "a a a"
     "d e f";
+  font-size: 45px;
 
   &__now {
     grid-area: a;
     text-align: center;
-    font-size: 20px;
+
     font-weight: bold;
     color: var(--white);
     text-shadow:
@@ -48,21 +50,18 @@
     grid-area: d;
     color: var(--white);
     font-weight: bold;
-    font-size: 24px;
     text-shadow:
       1px 1px 0 var(--black),
       1px -1px 0 var(--black),
       -1px -1px 0 var(--black),
       -1px 1px 0 var(--black);
     letter-spacing: 2px;
-
   }
 
   &__month {
     grid-area: e;
     color: var(--white);
     font-weight: bold;
-    font-size: 24px;
     text-shadow:
       1px 1px 0 var(--black),
       1px -1px 0 var(--black),
@@ -75,7 +74,6 @@
     grid-area: f;
     color: var(--white);
     font-weight: bold;
-    font-size: 24px;
     text-shadow:
       1px 1px 0 var(--black),
       1px -1px 0 var(--black),

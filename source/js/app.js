@@ -5,7 +5,7 @@ function getCorrectTime() {
 
   const nowMonth = document.querySelector('.js-month');
 
-  const months = ['январь','февраль','март','апрель','май','июнь','июль','август','сентябрь','октябрь','ноябрь','декабрь'];
+  const months = ['января','февраля','марта','апреля','майя','июня','июля','августа','сентября','октября','ноября','декабря'];
   nowMonth.textContent = months[nowTime.getMonth()];
 
   const nowDay = document.querySelector('.js-day');
