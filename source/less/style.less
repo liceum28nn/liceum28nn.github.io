@@ -1,41 +1,8 @@
 @import "global/fonts.less";
 @import "global/variables.less";
+@import "global/viewports.less";
+@import "blocks/body.less";
+@import "blocks/running-line.less";
 @import "blocks/header.less";
 @import "blocks/nav-menu.less";
 @import "blocks/time.less";
-
-
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100vw;
-  font-family: var(--basic-font);
-}
-
-.running-line {
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  position: fixed;
-  bottom: 0;
-}
-
-.running-line__text {
-  color: var(--black);
-  font-size: 26px;
-  display: inline-block;
-  // padding-left: 100%;
-  animation: running-line 25s infinite linear;
-}
-
-
-@keyframes running-line {
-  0% {
-    transform: translate(0, 0);
-  }
-
-  100% {
-    transform: translate(-100%, 0);
-  }
-}

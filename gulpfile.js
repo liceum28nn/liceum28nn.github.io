@@ -66,7 +66,7 @@ exports.html = html;
 
 // Scripts
 
-const scripts-f = () => {
+const scriptsF = () => {
   return gulp.src("source/js/*.js")
     .pipe(terser())
     .pipe(
@@ -78,7 +78,7 @@ const scripts-f = () => {
     .pipe(sync.stream());
 }
 
-exports.scripts-f = scripts-f;
+exports.scriptsF = scriptsF;
 
 
 const scripts = () => {
