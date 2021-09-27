@@ -1,0 +1,84 @@
+.time {
+  opacity: 1;
+  display: grid;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  // grid-template-columns: 1fr 1fr;
+  // grid-template-rows: 1fr 1fr;
+  grid-column-gap: 5px;
+  grid-template-areas:
+    "a a a"
+    "d e f";
+  font-size: 45px;
+
+  &__now {
+    grid-area: a;
+    text-align: center;
+
+    font-weight: bold;
+    color: var(--white);
+    text-shadow:
+      1px 1px 0 var(--black),
+      1px -1px 0 var(--black),
+      -1px -1px 0 var(--black),
+      -1px 1px 0 var(--black);
+    letter-spacing: 2px;
+  }
+
+  &__hours {
+    grid-area: a;
+
+    &::after {
+      content: ":";
+    }
+  }
+
+  &__minutes {
+    grid-area: b;
+
+    &::after {
+      content: ":";
+    }
+  }
+
+  &__seconds {
+    grid-column: c;
+  }
+
+  &__day {
+    grid-area: d;
+    color: var(--white);
+    font-weight: bold;
+    text-shadow:
+      1px 1px 0 var(--black),
+      1px -1px 0 var(--black),
+      -1px -1px 0 var(--black),
+      -1px 1px 0 var(--black);
+    letter-spacing: 2px;
+  }
+
+  &__month {
+    grid-area: e;
+    color: var(--white);
+    font-weight: bold;
+    text-shadow:
+      1px 1px 0 var(--black),
+      1px -1px 0 var(--black),
+      -1px -1px 0 var(--black),
+      -1px 1px 0 var(--black);
+    letter-spacing: 2px;
+  }
+
+  &__year {
+    grid-area: f;
+    color: var(--white);
+    font-weight: bold;
+    text-shadow:
+      1px 1px 0 var(--black),
+      1px -1px 0 var(--black),
+      -1px -1px 0 var(--black),
+      -1px 1px 0 var(--black);
+    letter-spacing: 2px;
+  }
+}

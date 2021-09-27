@@ -7,6 +7,8 @@
     "autoprefixer": "10.3.4",
     "browser-sync": "2.27.5",
     "del": "^6.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-htmlacademy": "^4.0.2",
     "gulp": "4.0.2",
     "gulp-gh-pages": "^0.5.4",
     "gulp-htmlmin": "^5.0.1",
@@ -33,7 +35,11 @@
     "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
     "test": "npm run editorconfig && npm run stylelint && w3c-html-validator source",
     "build": "gulp build",
-    "start": "gulp"
+    "deploy": "gh-pages -d build",
+    "start": "gulp",
+    "start-js": "browser-sync start --no-ui --server --no-online --no-ghost-mode --no-inject-changes --ss \"./build\" --files \"source/js/**/*.js\"",
+    "debug-js": "eslint source/js/",
+    "tests": "npm run build && npm run start-js"
   },
   "browserslist": [
     "last 2 versions",
