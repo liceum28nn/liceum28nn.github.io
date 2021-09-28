@@ -3,9 +3,9 @@ allElements.addEventListener("dblclick", function(evt) {
   evt.preventDefault()
 })
 
-allElements.addEventListener("contextmenu", function(evt) {
-  evt.preventDefault()
-})
+// allElements.addEventListener("contextmenu", function(evt) {
+//   evt.preventDefault()
+// })
 
 
 
@@ -18,7 +18,7 @@ allElements.onselectstart = (evt) => {
 }
 
 //slider on js
-let slides = document.querySelectorAll('#slides .slide');
+let slides = document.querySelectorAll('.slides .slide');
 let currentSlide = 0;
 
 let Interval = 3500; //time for change pictures

@@ -16,11 +16,17 @@
   }
 
   &--position {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-right: 10%;
-    margin-top: 0.5%;
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    // margin-right: 10%;
+    // margin-top: 0.5%;
+    @media @desktop {
+      // display: grid;
+      // grid-columns: 1/-1;
+      grid-column: 2/3;
+      grid-row: 3/4;
+    }
   }
 
   &__now {
@@ -35,6 +41,7 @@
       -1px -1px 0 var(--black),
       -1px 1px 0 var(--black);
     letter-spacing: 2px;
+
     @media @desktop {
       margin-right: 15px;
     }

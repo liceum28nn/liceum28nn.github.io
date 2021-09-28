@@ -1,6 +1,8 @@
 .nav-menu {
   opacity: 1;
   width: 100%;
+  grid-column: 1/-1;
+  grid-row: 4/5;
 
   &__list {
     list-style: none;
@@ -10,16 +12,18 @@
     width: 100%;
     // margin-top: 20%;
     justify-content: center;
+    column-gap: 20px;
     // align-items: flex-end;
+
   }
 
   &__item {
     // padding: 0;
     margin: 0;
-    text-transform: uppercase;
-    margin-right: 5%;
+    text-transform: none;
+    // margin-right: 5%;
     // width: 200px;
-    font-size: 45px;
+    font-size: 36px;
     padding: 0.5% 2%;
     font-weight: 600;
     color: var(--white);
@@ -51,7 +55,7 @@
     }
 
     &:nth-last-child(1) {
-      margin-right: 0;
+      // margin-right: 0;
     }
   }
 }
