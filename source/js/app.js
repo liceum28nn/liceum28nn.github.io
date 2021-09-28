@@ -1,3 +1,22 @@
+const allElements = document.querySelector("*");
+allElements.addEventListener("dblclick", function(evt) {
+  evt.preventDefault()
+})
+
+allElements.addEventListener("contextmenu", function(evt) {
+  evt.preventDefault()
+})
+
+
+
+allElements.onmousedown = (evt) => {
+  evt.preventDefault()
+}
+
+allElements.onselectstart = (evt) => {
+  evt.preventDefault()
+}
+
 //slider on js
 let slides = document.querySelectorAll('#slides .slide');
 let currentSlide = 0;

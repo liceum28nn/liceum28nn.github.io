@@ -196,7 +196,7 @@ const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
   gulp.watch("source/js/*.js", gulp.series(scripts));
   gulp.watch("source/*.html", gulp.series(html, reload));
-  gulp.watch("source/icons/**/*.svg", gulp.series(sprite, reload));
+  // gulp.watch("source/icons/**/*.svg", gulp.series(sprite, reload));
 }
 
 // Build
@@ -209,7 +209,7 @@ const build = gulp.series(
     styles,
     html,
     scripts,
-    sprite,
+    // sprite,
     createWebp
   )
 );
@@ -226,7 +226,7 @@ exports.default = gulp.series(
     styles,
     html,
     scripts,
-    sprite,
+    // sprite,
     createWebp
   ),
   gulp.series(
