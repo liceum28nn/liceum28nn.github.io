@@ -1,9 +1,7 @@
 .time {
   opacity: 1;
   display: grid;
-  position: absolute;
-  top: 5%;
-  right: 5%;
+
   // grid-template-columns: 1fr 1fr;
   // grid-template-rows: 1fr 1fr;
   grid-column-gap: 5px;
@@ -11,6 +9,19 @@
     "a a a"
     "d e f";
   font-size: 45px;
+
+  @media @desktop {
+    grid-template-areas: "a a a d e f";
+    column-gap: 10px;
+  }
+
+  &--position {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 10%;
+    margin-top: 0.5%;
+  }
 
   &__now {
     grid-area: a;
@@ -24,6 +35,9 @@
       -1px -1px 0 var(--black),
       -1px 1px 0 var(--black);
     letter-spacing: 2px;
+    @media @desktop {
+      margin-right: 15px;
+    }
   }
 
   &__hours {

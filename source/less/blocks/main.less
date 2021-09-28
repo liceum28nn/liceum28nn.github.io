@@ -1,0 +1,29 @@
+.main {
+  &__btn {
+    display: none;
+  }
+}
+
+.main-section {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 25px;
+  min-height: 100%;
+}
+
+.main__btn--1:checked ~ .main-section--1 {
+  display: none;
+}
+
+.main .main-section--1,
+.main .main-section--2,
+.main .main-section--3 {
+  display: none;
+}
+
+.main__btn--1:checked ~ .main-section--1,
+.main__btn--2:checked ~ .main-section--2,
+.main__btn--3:checked ~ .main-section--3 {
+  display: flex;
+}
