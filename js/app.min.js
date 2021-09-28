@@ -1,3 +1,16 @@
+//slider on js
+let slides = document.querySelectorAll('#slides .slide');
+let currentSlide = 0;
+
+let Interval = 3500; //time for change pictures
+let slideInterval = setInterval(nextSlide,Interval);
+// default time = 8500
+function nextSlide() {
+    slides[currentSlide].className = slides[currentSlide].className.replace(' showing','');
+    currentSlide = (currentSlide+1)%slides.length;
+    slides[currentSlide].className += ' showing';
+}
+
 function getCorrectTime() {
   const nowTime = new Date();
   const nowYear = document.querySelector('.js-year');
