@@ -1,4 +1,4 @@
-const allElements = document.querySelector("*");
+const allElements = document.querySelector(".header *");
 allElements.addEventListener("dblclick", function(evt) {
   evt.preventDefault()
 })

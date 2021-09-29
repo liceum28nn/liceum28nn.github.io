@@ -13,7 +13,7 @@ const squoosh = require("gulp-libsquoosh");
 const terser = require("gulp-terser");
 const rename = require("gulp-rename");
 const webp = require("gulp-webp");
-const svgSprite = require("gulp-svg-sprite");
+const svgSprite = require("gulp-svgstore");
 const del = require("del");
 
 
@@ -55,10 +55,10 @@ exports.styles = styles;
 // HTML
 
 const html = () => {
-  return gulp.src("source/*.html")
+  return gulp.src(["source/*.html"])
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"))
-    .pipe(sync.stream())
+    // .pipe(sync.stream())
 
 }
 
@@ -196,7 +196,7 @@ const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
   gulp.watch("source/js/*.js", gulp.series(scripts));
   gulp.watch("source/*.html", gulp.series(html, reload));
-  // gulp.watch("source/icons/**/*.svg", gulp.series(sprite, reload));
+  gulp.watch("source/icons/**/*.svg", gulp.series(sprite, reload));
 }
 
 // Build
@@ -209,7 +209,7 @@ const build = gulp.series(
     styles,
     html,
     scripts,
-    // sprite,
+    sprite,
     createWebp
   )
 );
@@ -226,7 +226,7 @@ exports.default = gulp.series(
     styles,
     html,
     scripts,
-    // sprite,
+    sprite,
     createWebp
   ),
   gulp.series(
