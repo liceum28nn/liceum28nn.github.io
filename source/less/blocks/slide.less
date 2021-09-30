@@ -1,33 +1,36 @@
- .slides {
+.slides,
+.slides2 {
   font-size: 32px;
   position: relative;
   width: 100%;
-  // height: 100vh;
+
+
+  height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @media @desktop {
-    height: 630px;
-
-  }
+  flex-direction: column;
+  align-items: stretch;
+  box-sizing: border-box;
 }
 
+.slide2,
 .slide {
   position: absolute;
   opacity: 0;
-  // transition: ease 1500ms;
   padding: 0;
   margin: 0;
   width: 100%;
   min-height: 100%;
-  transition: 300ms ease;
+  height: 770px;
+  // transition: 300ms ease;
 }
 
-.first {
+.first,
+.first2 {
+  min-height: 100%;
   opacity: 1;
   transition: 300ms ease;
   background-color: transparent;
+  position: relative;
 }
 
 @keyframes scale {
@@ -44,11 +47,14 @@
   }
 }
 
+.showing2,
 .showing {
   opacity: 1;
+  position: relative;
   transition: 1500ms ease;
 }
 
+.slide2,
 .slide {
   transition: 1500ms ease;
   background-repeat: no-repeat;

@@ -52,6 +52,11 @@
 
     &::after {
       content: ":";
+      animation-name: timeIn;
+      animation-duration: 2s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+
     }
   }
 
@@ -101,5 +106,20 @@
       -1px -1px 0 var(--black),
       -1px 1px 0 var(--black);
     letter-spacing: 2px;
+  }
+}
+
+
+@keyframes timeIn {
+  0% {
+    color: transparent;
+  }
+
+  50% {
+    color: var(--white);
+  }
+
+  100% {
+    color: transparent;
   }
 }
