@@ -1,11 +1,11 @@
-const allElements = document.querySelector(".header *");
+const allElements = document.querySelector("*");
 allElements.addEventListener("dblclick", function(evt) {
   evt.preventDefault()
 })
 
-// allElements.addEventListener("contextmenu", function(evt) {
-//   evt.preventDefault()
-// })
+allElements.addEventListener("contextmenu", function(evt) {
+  evt.preventDefault()
+})
 
 
 

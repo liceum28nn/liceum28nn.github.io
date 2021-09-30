@@ -15,6 +15,7 @@
   min-height: 100%;
 }
 
+
 .main .main-section--1,
 .main .main-section--2,
 .main .main-section--3,
@@ -48,3 +49,25 @@
     -1px -1px 0 var(--black),
     -1px 1px 0 var(--black);
 }
+
+
+
+.main__column-1::-webkit-scrollbar {
+  width: 25px;               /* ширина scrollbar */
+}
+
+.main__column-1::-webkit-scrollbar-track {
+  background: var(--gr-3);        /* цвет дорожки */
+  border-radius: 25px;       /* закругления плашки */
+}
+
+.main__column-1::-webkit-scrollbar-thumb {
+  background-color: var(--gr-1);    /* цвет плашки */
+  border-radius: 25px;       /* закругления плашки */
+  border: 1px solid var(--gr-5);  /* padding вокруг плашки */
+}
+
+ .main__column-1 {
+  scrollbar-width: thin;          /* "auto" или "thin"  */
+  scrollbar-color: blue orange;
+ }
