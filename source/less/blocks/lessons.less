@@ -10,9 +10,9 @@
     box-sizing: border-box;
     display: grid;
     grid-template-areas:
-      "a a a"
-      "b b b"
-      "c d e";
+      "i a a a"
+      "i b b b"
+      "c c d e";
     // justify-content: space-between;
   }
 
@@ -54,5 +54,11 @@
     font-style: normal;
     font-weight: 500;
     grid-area: e;
+  }
+
+  &__img {
+    width: 220px;
+    height: 130px;
+    grid-area: i;
   }
 }
