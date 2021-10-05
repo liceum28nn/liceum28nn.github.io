@@ -8,9 +8,15 @@
   box-sizing: border-box;
   padding-top: 10px;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAMAAAApB0NrAAAABlBMVEX///+pqalTpKl9AAAAAnRSTlMAGovxNEIAAAAdSURBVDjLY2AAAUaG4UYxDDsfjfp91O+jfqfE7wCzpQCw/dq+qQAAAABJRU5ErkJggg==");
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: space-around;
+  align-content: space-around;
 
 
   &__list {
+    width: 100%;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -20,6 +26,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     margin-bottom: 10px;
+    order: 2;
   }
 
   &__label {
@@ -31,6 +38,7 @@
     display: flex;
     justify-content: center;
     align-items: stretch;
+    transition: 500ms ease;
   }
 
   &__btn {
@@ -52,7 +60,9 @@
   }
 
   &__content {
-    border: 1px solid black;
+    // border: 1px solid black;
+    outline: 2px solid var(--black);
+    outline-offset: -3px;
 
   }
 }
@@ -79,6 +89,7 @@
 .smena__btn--19:checked ~ .smena__list .smena__label--19 {
   color: var(--white);
   background: var(--gr-4);
+  transition: 500ms ease;
 }
 
 
@@ -92,11 +103,19 @@
 
 .smena__content-title {
   width: 100%;
-  border: 1px solid black;
-  font-size: 24px;
+  // border: 1px solid black;
+  outline: 2px solid var(--black);
+  outline-offset: -3px;
+  font-size: 44px;
+  // color: var(--white);
+  color: var(--blue);
   padding: 15px;
   text-align: center;
   font-weight: bold;
+  text-shadow: 1px 1px 0 var(--black),
+    -1px -1px 0 var(--black),
+    -1px 1px 0 var(--black),
+    1px -1px 0 var(--black);
 }
 
 .smena__day {
@@ -107,11 +126,12 @@
   flex-direction: column;
   font-size: 24px;
   width: calc(100% / 6);
-   counter-reset: section;
+  counter-reset: section;
 }
 
 .smena__content:nth-child(1) {
   padding: 25px;
+  font-size: 36px;
   background-color: var(--gr-4);
   color: var(--white);
   text-align: center;
@@ -141,6 +161,7 @@
   padding: 0;
   margin: 0;
   display: none;
+  transition: 1500ms ease;
 }
 
 
@@ -164,6 +185,7 @@
 .smena__btn--18:checked ~ .smena__lessons .smena__item--18,
 .smena__btn--19:checked ~ .smena__lessons .smena__item--19 {
   display: flex;
+  transition: 1500ms ease;
 }
 
 @keyframes scaleBtn {
@@ -181,6 +203,7 @@
 }
 
 .smena__btn--close {
+  outline: 0;
   display: flex;
   width: 80px;
   height: 80px;
@@ -190,7 +213,7 @@
   position: relative;
   left: 45.5%;
   transform: translateX(50%);
-  bottom: -150px;
+  bottom: 5px;
   animation: scaleBtn 5000ms ease infinite;
 
   &::after,

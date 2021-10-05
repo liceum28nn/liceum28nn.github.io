@@ -117,17 +117,31 @@ console.log(allLessons);
 
 if (document.querySelector(".js-item-1")) {
   const lessonOneRange = document.querySelector(".js-item-1")
-
-lessonOneRange.addEventListener('click', function () {
-
-document.querySelector(".js-smena").classList.toggle('visually-hidden')
-// console.log('click on me js-items-1')
-
+  lessonOneRange.addEventListener('click', function () {
+  document.querySelector(".js-smena").classList.toggle('visually-hidden')
 })
 
 document.querySelector(".js-smena-btn").addEventListener('click', function () {
   this.parentElement.classList.toggle('visually-hidden')
   // console.log(this.parentElement)
 })
+
+}
+
+if (document.querySelector('.js-item-2')) {
+  document.querySelector('.js-item-2').addEventListener('click', function () {
+
+    document.querySelector(".js-smena-two").classList.toggle('visually-hidden')
+  })
+}
+
+
+if (document.querySelector('.js-smena-next-btn')) {
+
+document.querySelector('.js-smena-next-btn').addEventListener('click', function () {
+  this.parentElement.classList.toggle('visually-hidden')
+
+})
+  // js-smena-next-btn
 
 }
