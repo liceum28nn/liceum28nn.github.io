@@ -1,0 +1,211 @@
+.smena {
+  position: absolute;
+  height: 90%;
+  border: 5px solid var(--gr-1);
+  width: 95%;
+  margin: 50px;
+  background-color: var(--white);
+  box-sizing: border-box;
+  padding-top: 10px;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+    display: flex;
+    column-gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+
+  &__label {
+    margin: 0;
+    padding: 15px;
+    // margin: 15px;
+    border: 5px solid var(--gr-4);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  &__btn {
+    display: none;
+  }
+
+  &__lessons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content {
+    border: 1px solid black;
+
+  }
+}
+
+
+.smena__btn--1:checked ~ .smena__list .smena__label--1,
+.smena__btn--2:checked ~ .smena__list .smena__label--2,
+.smena__btn--3:checked ~ .smena__list .smena__label--3,
+.smena__btn--4:checked ~ .smena__list .smena__label--4,
+.smena__btn--5:checked ~ .smena__list .smena__label--5,
+.smena__btn--6:checked ~ .smena__list .smena__label--6,
+.smena__btn--7:checked ~ .smena__list .smena__label--7,
+.smena__btn--8:checked ~ .smena__list .smena__label--8,
+.smena__btn--9:checked ~ .smena__list .smena__label--9,
+.smena__btn--10:checked ~ .smena__list .smena__label--10,
+.smena__btn--11:checked ~ .smena__list .smena__label--11,
+.smena__btn--12:checked ~ .smena__list .smena__label--12,
+.smena__btn--13:checked ~ .smena__list .smena__label--13,
+.smena__btn--14:checked ~ .smena__list .smena__label--14,
+.smena__btn--15:checked ~ .smena__list .smena__label--15,
+.smena__btn--16:checked ~ .smena__list .smena__label--16,
+.smena__btn--17:checked ~ .smena__list .smena__label--17,
+.smena__btn--18:checked ~ .smena__list .smena__label--18,
+.smena__btn--19:checked ~ .smena__list .smena__label--19 {
+  color: var(--white);
+  background: var(--gr-4);
+}
+
+
+.smena__table {
+  display: flex;
+  // flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  // width: 100%;
+}
+
+.smena__content-title {
+  width: 100%;
+  border: 1px solid black;
+  font-size: 24px;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.smena__day {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  width: calc(100% / 6);
+   counter-reset: section;
+}
+
+.smena__content:nth-child(1) {
+  padding: 25px;
+  background-color: var(--gr-4);
+  color: var(--white);
+  text-align: center;
+
+  &::before {
+    content: "";
+  }
+}
+
+.smena__content {
+  padding: 15px;
+}
+
+.smena__content-count {
+  opacity: 1;
+
+    &::before {
+      font-weight: bold;
+      counter-increment: section;
+      content: counter(section) + ". ";
+  }
+}
+
+
+.smena__item {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+
+
+.smena__btn--1:checked ~ .smena__lessons .smena__item--1,
+.smena__btn--2:checked ~ .smena__lessons .smena__item--2,
+.smena__btn--3:checked ~ .smena__lessons .smena__item--3,
+.smena__btn--4:checked ~ .smena__lessons .smena__item--4,
+.smena__btn--5:checked ~ .smena__lessons .smena__item--5,
+.smena__btn--6:checked ~ .smena__lessons .smena__item--6,
+.smena__btn--7:checked ~ .smena__lessons .smena__item--7,
+.smena__btn--8:checked ~ .smena__lessons .smena__item--8,
+.smena__btn--9:checked ~ .smena__lessons .smena__item--9,
+.smena__btn--10:checked ~ .smena__lessons .smena__item--10,
+.smena__btn--11:checked ~ .smena__lessons .smena__item--11,
+.smena__btn--12:checked ~ .smena__lessons .smena__item--12,
+.smena__btn--13:checked ~ .smena__lessons .smena__item--13,
+.smena__btn--14:checked ~ .smena__lessons .smena__item--14,
+.smena__btn--15:checked ~ .smena__lessons .smena__item--15,
+.smena__btn--16:checked ~ .smena__lessons .smena__item--16,
+.smena__btn--17:checked ~ .smena__lessons .smena__item--17,
+.smena__btn--18:checked ~ .smena__lessons .smena__item--18,
+.smena__btn--19:checked ~ .smena__lessons .smena__item--19 {
+  display: flex;
+}
+
+@keyframes scaleBtn {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.smena__btn--close {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+  font-size: 0;
+  border: 0;
+  position: relative;
+  left: 45.5%;
+  transform: translateX(50%);
+  bottom: -150px;
+  animation: scaleBtn 5000ms ease infinite;
+
+  &::after,
+  &::before {
+    top: 25px;
+    left: 0;
+    content: "";
+    display: block;
+    background-color: var(--gr-3);
+    width: 80px;
+    height: 15px;
+    border-radius: 10px;
+    position: absolute;
+    transform: rotate(-45deg);
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+}
