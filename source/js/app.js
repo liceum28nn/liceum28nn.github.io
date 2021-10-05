@@ -121,5 +121,6 @@ document.querySelector(".js-smena").classList.toggle('visually-hidden')
 })
 
 document.querySelector(".js-smena-btn").addEventListener('click', function () {
-  document.querySelector(".js-smena").classList.toggle('visually-hidden')
+  this.parentElement.classList.toggle('visually-hidden')
+  // console.log(this.parentElement)
 })
