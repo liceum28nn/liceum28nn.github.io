@@ -1,20 +1,20 @@
 const allElements = document.querySelector("*");
 allElements.addEventListener("dblclick", function(evt) {
-  evt.preventDefault()
+  // evt.preventDefault()
 })
 
 allElements.addEventListener("contextmenu", function(evt) {
-  evt.preventDefault()
+  // evt.preventDefault()
 })
 
 
 
 allElements.onmousedown = (evt) => {
-  evt.preventDefault()
+  // evt.preventDefault()
 }
 
 allElements.onselectstart = (evt) => {
-  evt.preventDefault()
+  // evt.preventDefault()
 }
 
 //slider on js
@@ -107,3 +107,19 @@ for ( const f of allLessons.teachersList) {
   // outputString.textContent =outputString.textContent + ' '  + f.name;
 }
 console.log(allLessons);
+
+
+//show lesons 1 smeni
+
+const lessonOneRange = document.querySelector(".js-item-1")
+
+lessonOneRange.addEventListener('click', function () {
+
+document.querySelector(".js-smena").classList.toggle('visually-hidden')
+// console.log('click on me js-items-1')
+
+})
+
+document.querySelector(".js-smena-btn").addEventListener('click', function () {
+  document.querySelector(".js-smena").classList.toggle('visually-hidden')
+})
