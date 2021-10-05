@@ -1,20 +1,20 @@
 const allElements = document.querySelector("*");
 allElements.addEventListener("dblclick", function(evt) {
-  // evt.preventDefault()
+  evt.preventDefault()
 })
 
 allElements.addEventListener("contextmenu", function(evt) {
-  // evt.preventDefault()
+  evt.preventDefault()
 })
 
 
 
 allElements.onmousedown = (evt) => {
-  // evt.preventDefault()
+  evt.preventDefault()
 }
 
 allElements.onselectstart = (evt) => {
-  // evt.preventDefault()
+  evt.preventDefault()
 }
 
 //slider on js
