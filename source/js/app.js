@@ -18,6 +18,7 @@ allElements.onselectstart = (evt) => {
 }
 
 //slider on js
+if ( document.querySelector('.slides')) {
 let slides = document.querySelectorAll('.slides .slide');
 let currentSlide = 0;
 
@@ -29,18 +30,21 @@ function nextSlide() {
     currentSlide = (currentSlide+1)%slides.length;
     slides[currentSlide].className += ' showing';
 }
-
-let slides2 = document.querySelectorAll('.slides2 .slide2');
-let currentSlide2 = 0;
+}
+if (document.querySelector('.slides2')) {
+  let slides2 = document.querySelectorAll('.slides2 .slide2');
+  let currentSlide2 = 0;
 
 let Interval2 = 3500; //time for change pictures
 let slideInterval2 = setInterval(nextSlide2,Interval2);
 // default time = 8500
 function nextSlide2() {
-    slides2[currentSlide2].className = slides2[currentSlide2].className.replace(' showing2','');
-    currentSlide2 = (currentSlide2+1)%slides2.length;
-    slides2[currentSlide].className += ' showing2';
+  slides2[currentSlide2].className = slides2[currentSlide2].className.replace(' showing2','');
+  currentSlide2 = (currentSlide2+1)%slides2.length;
+  slides2[currentSlide].className += ' showing2';
 }
+}
+
 
 function getCorrectTime() {
   const nowTime = new Date();
@@ -111,7 +115,8 @@ console.log(allLessons);
 
 //show lesons 1 smeni
 
-const lessonOneRange = document.querySelector(".js-item-1")
+if (document.querySelector(".js-item-1")) {
+  const lessonOneRange = document.querySelector(".js-item-1")
 
 lessonOneRange.addEventListener('click', function () {
 
@@ -124,3 +129,5 @@ document.querySelector(".js-smena-btn").addEventListener('click', function () {
   this.parentElement.classList.toggle('visually-hidden')
   // console.log(this.parentElement)
 })
+
+}
