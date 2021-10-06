@@ -247,7 +247,7 @@
   [
     {
       "classID": 1,
-      "dayOfWeak" : 1,
+      "dayOfWeek" : 1,
        "lesson-1": "Русский язык",
       "teacher-1": "Приходько В.О.",
          "change": "true",
@@ -263,7 +263,7 @@
       "teacher-6": "Приходько В.О."
     }, {
       "classID": 2,
-      "dayOfWeak" : 1,
+      "dayOfWeek" : 1,
        "lesson-1": "Русский язык",
       "teacher-1": "Приходько В.О.",
          "change": "true",
