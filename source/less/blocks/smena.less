@@ -63,7 +63,12 @@
     // border: 1px solid black;
     outline: 2px solid var(--black);
     outline-offset: -3px;
+  }
 
+  &--one,
+  &--two {
+    animation: modal-appearance 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    // transform: translateX(-50%);
   }
 }
 
@@ -127,6 +132,10 @@
   font-size: 24px;
   width: calc(100% / 6);
   counter-reset: section;
+}
+
+.smena--two .smena__day {
+  width: calc(100% / 5);
 }
 
 .smena__content:nth-child(1) {
@@ -234,3 +243,16 @@
     transform: rotate(45deg);
   }
 }
+
+
+@keyframes modal-appearance {
+  0% {
+    transform: scale(0) translateX(-50%);
+  }
+
+  to {
+    transform: scale(1) translateX(0%);
+  }
+}
+
+

@@ -31,6 +31,7 @@ function nextSlide() {
     slides[currentSlide].className += ' showing';
 }
 }
+
 if (document.querySelector('.slides2')) {
   let slides2 = document.querySelectorAll('.slides2 .slide2');
   let currentSlide2 = 0;
@@ -41,7 +42,7 @@ let slideInterval2 = setInterval(nextSlide2,Interval2);
 function nextSlide2() {
   slides2[currentSlide2].className = slides2[currentSlide2].className.replace(' showing2','');
   currentSlide2 = (currentSlide2+1)%slides2.length;
-  slides2[currentSlide].className += ' showing2';
+  slides2[currentSlide2].className += ' showing2';
 }
 }
 
@@ -144,4 +145,8 @@ document.querySelector('.js-smena-next-btn').addEventListener('click', function 
 })
   // js-smena-next-btn
 
+}
+
+function deleteParentElement() {
+  // this.parentElement.classList.add('visually-hidden')
 }
