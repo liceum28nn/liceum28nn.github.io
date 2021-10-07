@@ -37,16 +37,40 @@
     <nav class="nav-menu">
         <ul class="nav-menu__list">
           <li class="nav-menu__item nav-menu__item--1">
-            <label for="main__btn-1">Расписание</label>
+            <label class="nav-menu__label" for="main__btn-1">
+              <picture>
+                <source type="image/webp" srcset="img/lessons-icon@1x.webp 1x, img/lessons-icon@2x.webp 2x">
+                <img class="news__image12" srcset="img/lessons-icon@2x.png 2x" src="img/lessons-icon.png" width="65" height="65" alt="picture">
+              </picture>
+              Расписание
+            </label>
           </li>
           <li class="nav-menu__item nav-menu__item--2">
-            <label for="main__btn-2">Замены</label>
+            <label class="nav-menu__label" for="main__btn-2">
+              <picture>
+                <source type="image/webp" srcset="img/swap-icon@1x.webp 1x, img/swap-icon@2x.webp 2x">
+                <img class="news__image12" srcset="img/swap-icon@2x.png 2x" src="img/swap-icon@1x.png" width="65" height="65" alt="picture">
+              </picture>
+              Замены
+            </label>
           </li>
           <li class="nav-menu__item nav-menu__item--3">
-            <label for="main__btn-3">Школьная жизнь</label>
+            <label class="nav-menu__label" for="main__btn-3">
+              <picture>
+                <source type="image/webp" srcset="img/school-icon@1x.webp 1x, img/school-icon@2x.webp 2x">
+                <img class="news__image12" srcset="img/school-icon@2x.png 2x" src="img/school-icon@1x.png" width="65" height="65" alt="picture">
+              </picture>
+            Школьная жизнь
+          </label>
           </li>
           <li class="nav-menu__item nav-menu__item--4">
-            <label for="main__btn-4">Фотогалерея</label>
+            <label class="nav-menu__label" for="main__btn-4">
+              <picture>
+                <source type="image/webp" srcset="img/images-icon@1x.webp 1x, img/images-icon@2x.webp 2x">
+                <img class="news__image12" srcset="img/images-icon@2x.png 2x" src="img/images-icon@1x.png" width="65" height="65" alt="picture">
+              </picture>
+              Фотогалерея
+            </label>
           </li>
         </ul>
       </nav>
@@ -125,7 +149,7 @@
             <span class="lessons__author">Администратор А.А.</span>
             <span class="lessons__time">14 сентября 2020 </span>
           </li>
-          <li class="lessons__item">
+          <li class="lessons__item js-item-3">
             <picture>
               <source type="image/webp" srcset="img/calendar@1x.webp 1x, img/calendar@2x.webp 2x">
               <img class="lessons__img" srcset="img/calendar@2x.png 2x" src="img/calendar@1x.png" width="110" height="160" alt="picture">
@@ -1505,7 +1529,7 @@
     <button onClick="deleteParentElement()" class="smena__btn smena__btn--close smena-two__btn--close js-smena-next-btn">Закрыть расписание</button>
   </div>
 
-  <div class="smena smena--pdou js-smena-pdou visually-hidden1">
+  <div class="smena smena--pdou js-smena-pdou visually-hidden">
     <input type="radio" name="smena-pdou" class="smena__btn smena__btn--1" id="smena-pdou__btn-1" checked="">
     <input type="radio" name="smena-pdou" class="smena__btn smena__btn--2" id="smena-pdou__btn-2">
     <input type="radio" name="smena-pdou" class="smena__btn smena__btn--3" id="smena-pdou__btn-3">
@@ -1966,7 +1990,7 @@
         </ul>
       </li>
      </ul>
-      <button onClick="deleteParentElement()" class="smena__btn smena__btn--close smena-two__btn--close js-smena-next-btn">Закрыть расписание</button>
+      <button onClick="deleteParentElement()" class="smena__btn smena__btn--close smena-two__btn--close js-smena-pdou-btn">Закрыть расписание</button>
    </div>
 
   <script src="js/app.min.js"></script>
