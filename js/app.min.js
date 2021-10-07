@@ -150,3 +150,16 @@ document.querySelector('.js-smena-next-btn').addEventListener('click', function 
 function deleteParentElement() {
   // this.parentElement.classList.add('visually-hidden')
 }
+
+if (document.querySelector('.js-item-3')) {
+  document.querySelector('.js-item-3').addEventListener('click', function () {
+    document.querySelector(".js-smena-pdou").classList.toggle('visually-hidden')
+  })
+}
+
+
+if (document.querySelector('.js-smena-pdou-btn')) {
+  document.querySelector('.js-smena-pdou-btn').addEventListener('click', function () {
+    this.parentElement.classList.toggle('visually-hidden')
+  })
+}
