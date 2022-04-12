@@ -56,44 +56,30 @@ exports.styles = styles;
 
 const html = () => {
   return gulp.src(["source/*.html"])
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    // .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"))
-    // .pipe(sync.stream())
-
+    .pipe(sync.stream())
 }
 
 exports.html = html;
 
 // Scripts
 
-const scriptsF = () => {
-  return gulp.src("source/js/*.js")
-    .pipe(terser())
-    .pipe(
-      rename({
-        extname: ".min.js"
-      })
-    )
-    .pipe(gulp.dest("build/js"))
-    .pipe(sync.stream());
-}
-
-exports.scriptsF = scriptsF;
-
-
 const scripts = () => {
-  return gulp.src("source/js/*.js")
+  return gulp.src(["source/js/*.js"])
     // .pipe(terser())
-    .pipe(
-      rename({
-        extname: ".min.js"
-      })
-    )
+    // .pipe(
+    //   rename({
+    //     extname: ".min.js"
+    //   })
+    // )
     .pipe(gulp.dest("build/js"))
-    .pipe(sync.stream());
+    // .pipe(sync.stream());
 }
 
 exports.scripts = scripts;
+
+
 
 // Images
 
@@ -194,8 +180,8 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
-  gulp.watch("source/js/*.js", gulp.series(scripts));
-  gulp.watch("source/*.html", gulp.series(html, reload));
+  gulp.watch("source/js/*.js", gulp.series(scripts, reload));
+  gulp.watch("source/*.html", gulp.series(html));
   gulp.watch("source/icons/**/*.svg", gulp.series(sprite, reload));
 }
 

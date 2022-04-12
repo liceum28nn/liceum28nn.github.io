@@ -1,5 +1,6 @@
-import { getData } from "./utils.min.js";
+import { getData } from "./utils.js";
 
+console.log('123')
 const allElements = document.querySelector('*');
 allElements.addEventListener('dblclick', (evt) => {
   evt.preventDefault();
