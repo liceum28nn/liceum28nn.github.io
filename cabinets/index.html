@@ -1913,12 +1913,6 @@ td.ta-l {
     if (document.querySelector(url)) {
       document.querySelector(url).checked = true;
     }
-
-    const delay = min => {
-        return new Promise (r => setTimeout(() => r(),min*60*1000))
-    }
-
-    delay(5).then(()=> location.reload())
   </script>
 </body>
 </html>
