@@ -1,0 +1,65 @@
+.lessons {
+  opacity: 1;
+
+  &__item {
+    outline: 2px solid black;
+    width: 100%;
+    background-color: var(--white);
+    padding: 15px 5px 5px 25px;
+    border-radius: 25px;
+    border: 3px solid var(--gr-3);
+    box-sizing: border-box;
+    display: grid;
+    grid-template-areas:
+      "i a a a"
+      "i b b b"
+      "c c d e";
+    // justify-content: space-between;
+  }
+
+  &__list {
+    margin: 0;
+    row-gap: 25px;
+    flex-wrap: wrap;
+    padding: 25px;
+    list-style: none;
+    display: flex;
+    width: 100%;
+    // flex-direction: column;
+    // justify-content: space-between;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    grid-area: a;
+  }
+
+  &__time-red {
+    font-size: 24px;
+    grid-area: b;
+  }
+
+  &__author {
+    // margin-top: auto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    grid-area: c;
+  }
+
+  &__time {
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    grid-area: e;
+  }
+
+  &__img {
+    width: 220px;
+    height: 130px;
+    grid-area: i;
+  }
+}

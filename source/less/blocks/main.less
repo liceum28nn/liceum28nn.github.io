@@ -1,0 +1,83 @@
+.main {
+
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAMAAAApB0NrAAAABlBMVEX///+pqalTpKl9AAAAAnRSTlMAGovxNEIAAAAdSURBVDjLY2AAAUaG4UYxDDsfjfp91O+jfqfE7wCzpQCw/dq+qQAAAABJRU5ErkJggg==");
+
+  &__btn {
+    display: none;
+  }
+
+  & * {
+     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAMAAAApB0NrAAAABlBMVEX///+pqalTpKl9AAAAAnRSTlMAGovxNEIAAAAdSURBVDjLY2AAAUaG4UYxDDsfjfp91O+jfqfE7wCzpQCw/dq+qQAAAABJRU5ErkJggg==");
+  }
+}
+
+.main-section {
+  display: flex;
+  justify-content: flex-start;
+  padding: 25px;
+  height: 100%;
+  min-height: 100%;
+}
+
+
+.main .main-section--1,
+.main .main-section--2,
+.main .main-section--3,
+.main .main-section--4 {
+  display: none;
+}
+
+.main__btn--1:checked ~ .main .main-section--1,
+.main__btn--2:checked ~ .main .main-section--2,
+.main__btn--3:checked ~ .main .main-section--3,
+.main__btn--4:checked ~ .main .main-section--4 {
+  display: flex;
+  align-items: stretch;
+  height: 100%;
+}
+
+.main__btn--1:checked ~ .header .nav-menu .nav-menu__list .nav-menu__item--1,
+.main__btn--2:checked ~ .header .nav-menu .nav-menu__list .nav-menu__item--2,
+.main__btn--3:checked ~ .header .nav-menu .nav-menu__list .nav-menu__item--3,
+.main__btn--4:checked ~ .header .nav-menu .nav-menu__list .nav-menu__item--4 {
+  margin-bottom: -1px;
+}
+
+.main__btn--1:checked ~ .header .nav-menu .nav-menu__list .nav-menu__item--1,
+.main__btn--2:checked ~ .header .nav-menu .nav-menu__list .nav-menu__item--2,
+.main__btn--3:checked ~ .header .nav-menu .nav-menu__list .nav-menu__item--3,
+.main__btn--4:checked ~ .header .nav-menu .nav-menu__list .nav-menu__item--4 {
+  color: var(--white);
+  background: var(--white);
+  box-shadow: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  text-shadow:
+    1px 1px 0 var(--black),
+    1px -1px 0 var(--black),
+    -1px -1px 0 var(--black),
+    -1px 1px 0 var(--black);
+}
+
+
+
+.main__column-1::-webkit-scrollbar {
+  width: 25px;               /* ширина scrollbar */
+}
+
+.main__column-1::-webkit-scrollbar-track {
+  background: var(--gr-3);        /* цвет дорожки */
+  border-radius: 25px;       /* закругления плашки */
+}
+
+.main__column-1::-webkit-scrollbar-thumb {
+  background-color: var(--gr-1);    /* цвет плашки */
+  border-radius: 25px;       /* закругления плашки */
+  border: 1px solid var(--gr-5);  /* padding вокруг плашки */
+}
+
+ .main__column-1 {
+  scrollbar-width: thin;          /* "auto" или "thin"  */
+  scrollbar-color: blue orange;
+  scroll-behavior: smooth;
+ }

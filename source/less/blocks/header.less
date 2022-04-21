@@ -1,14 +1,50 @@
 .header {
-  margin: 0;
-  padding: 0;
   position: relative;
-  background: rgb(41,189,91);
+  margin: 0;
+  background: rgb(41, 189, 91);
   background: linear-gradient(90deg, rgba(41,189,91,1) 20%, rgba(81,185,31,1) 40%, rgba(32,208,58,1) 60%, rgba(101,210,97,1) 80%);
-  height: 20vh;
   width: 100%;
   display: flex;
   justify-content: space-around;
-  align-items: flex-end;
-  padding-bottom: 1%;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 13px solid var(--white);
+  padding: 10px 25px 0 25px;
+  box-sizing: border-box;
+
+  &__img {
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    width: 135px;
+    height: 135px;
+  }
+
+  &__name {
+    display: flex;
+    column-gap: 10px;
+    color: var(--white);
+    text-shadow:
+      1px 1px 0 var(--black),
+      1px -1px 0 var(--black),
+      -1px -1px 0 var(--black),
+      -1px 1px 0 var(--black);
+    align-self: center;
+    margin-left: 6%;
+    font-size: 36px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__lead {
+
+  }
+
+  &__content {
+
+  }
 
 }
+
+
+

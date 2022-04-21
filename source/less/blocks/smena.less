@@ -1,0 +1,280 @@
+.smena {
+  position: absolute;
+  height: 90%;
+  border: 5px solid var(--gr-1);
+  width: 95%;
+  margin: 50px;
+  background-color: var(--white);
+  box-sizing: border-box;
+  padding-top: 10px;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAMAAAApB0NrAAAABlBMVEX///+pqalTpKl9AAAAAnRSTlMAGovxNEIAAAAdSURBVDjLY2AAAUaG4UYxDDsfjfp91O+jfqfE7wCzpQCw/dq+qQAAAABJRU5ErkJggg==");
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: space-around;
+  align-content: space-around;
+
+
+  &__list {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 32px;
+    display: flex;
+    column-gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    order: 2;
+  }
+
+  &__label {
+    margin: 0;
+    padding: 15px;
+    // margin: 15px;
+    border: 5px solid var(--gr-4);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    transition: 500ms ease;
+  }
+
+  &__btn {
+    display: none;
+  }
+
+  &__lessons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content {
+    // border: 1px solid black;
+    outline: 2px solid var(--black);
+    outline-offset: -3px;
+  }
+
+  &--one,
+  &--two {
+    animation: modal-appearance 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    // transform: translateX(-50%);
+  }
+}
+
+.smena__btn--1:checked ~ .smena__list .smena__label--1,
+.smena__btn--2:checked ~ .smena__list .smena__label--2,
+.smena__btn--3:checked ~ .smena__list .smena__label--3,
+.smena__btn--4:checked ~ .smena__list .smena__label--4,
+.smena__btn--5:checked ~ .smena__list .smena__label--5,
+.smena__btn--6:checked ~ .smena__list .smena__label--6,
+.smena__btn--7:checked ~ .smena__list .smena__label--7,
+.smena__btn--8:checked ~ .smena__list .smena__label--8,
+.smena__btn--9:checked ~ .smena__list .smena__label--9,
+.smena__btn--10:checked ~ .smena__list .smena__label--10,
+.smena__btn--11:checked ~ .smena__list .smena__label--11,
+.smena__btn--12:checked ~ .smena__list .smena__label--12,
+.smena__btn--13:checked ~ .smena__list .smena__label--13,
+.smena__btn--14:checked ~ .smena__list .smena__label--14,
+.smena__btn--15:checked ~ .smena__list .smena__label--15,
+.smena__btn--16:checked ~ .smena__list .smena__label--16,
+.smena__btn--17:checked ~ .smena__list .smena__label--17,
+.smena__btn--18:checked ~ .smena__list .smena__label--18,
+.smena__btn--19:checked ~ .smena__list .smena__label--19 {
+  color: var(--white);
+  background: var(--gr-4);
+  transition: 500ms ease;
+}
+
+.smena__table {
+  display: flex;
+  // flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  // width: 100%;
+}
+
+.smena__content-title {
+  width: 100%;
+  // border: 1px solid black;
+  outline: 2px solid var(--black);
+  outline-offset: -3px;
+  font-size: 44px;
+  // color: var(--white);
+  color: var(--blue);
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 var(--black),
+    -1px -1px 0 var(--black),
+    -1px 1px 0 var(--black),
+    1px -1px 0 var(--black);
+}
+
+.smena__day {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  width: calc(100% / 6);
+  counter-reset: section;
+}
+
+.smena--two .smena__day {
+  width: calc(100% / 5);
+}
+
+.smena__content:nth-child(1) {
+  padding: 25px;
+  font-size: 36px;
+  background-color: var(--gr-4);
+  color: var(--white);
+  text-align: center;
+
+  &::before {
+    content: "";
+  }
+}
+
+.smena__content {
+  padding: 15px;
+}
+
+.smena__content-count {
+  opacity: 1;
+
+    &::before {
+      font-weight: bold;
+      counter-increment: section;
+      content: counter(section) + ". ";
+  }
+}
+
+.smena__item {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  display: none;
+  transition: 1500ms ease;
+}
+
+
+.smena__btn--1:checked ~ .smena__lessons .smena__item--1,
+.smena__btn--2:checked ~ .smena__lessons .smena__item--2,
+.smena__btn--3:checked ~ .smena__lessons .smena__item--3,
+.smena__btn--4:checked ~ .smena__lessons .smena__item--4,
+.smena__btn--5:checked ~ .smena__lessons .smena__item--5,
+.smena__btn--6:checked ~ .smena__lessons .smena__item--6,
+.smena__btn--7:checked ~ .smena__lessons .smena__item--7,
+.smena__btn--8:checked ~ .smena__lessons .smena__item--8,
+.smena__btn--9:checked ~ .smena__lessons .smena__item--9,
+.smena__btn--10:checked ~ .smena__lessons .smena__item--10,
+.smena__btn--11:checked ~ .smena__lessons .smena__item--11,
+.smena__btn--12:checked ~ .smena__lessons .smena__item--12,
+.smena__btn--13:checked ~ .smena__lessons .smena__item--13,
+.smena__btn--14:checked ~ .smena__lessons .smena__item--14,
+.smena__btn--15:checked ~ .smena__lessons .smena__item--15,
+.smena__btn--16:checked ~ .smena__lessons .smena__item--16,
+.smena__btn--17:checked ~ .smena__lessons .smena__item--17,
+.smena__btn--18:checked ~ .smena__lessons .smena__item--18,
+.smena__btn--19:checked ~ .smena__lessons .smena__item--19 {
+  display: flex;
+  transition: 1500ms ease;
+}
+
+@keyframes scaleBtn {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.smena__btn--close {
+  outline: 0;
+  display: flex;
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+  font-size: 0;
+  border: 0;
+  position: relative;
+  left: 47.8%;
+  transform: translateX(50%);
+  bottom: 5px;
+  animation: scaleBtn 5000ms ease infinite;
+
+  &::after,
+  &::before {
+    top: 25px;
+    left: 0;
+    content: "";
+    display: block;
+    background-color: var(--gr-3);
+    width: 80px;
+    height: 15px;
+    border-radius: 10px;
+    position: absolute;
+    transform: rotate(-45deg);
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes modal-appearance {
+  0% {
+    transform: scale(0) translateX(-50%);
+  }
+
+  to {
+    transform: scale(1) translateX(0%);
+  }
+}
+
+
+.smena--pdou .smena__day {
+  width: calc(100% / 5);
+}
+
+
+.smena--pdou .smena__table--2 .smena__day {
+    width: calc(100% / 4);
+}
+
+.smena--pdou .smena__table--3 .smena__day {
+    width: calc(100% / 3);
+}
+
+
+.smena--pdou .smena__table--4 .smena__day {
+    width: calc(100% / 4);
+}
+
+.smena--pdou .smena__table--5 .smena__day {
+    width: calc(100% / 5);
+}
+
+
+.smena--pdou .smena__table--6 .smena__day {
+    width: calc(100% / 2);
+}
