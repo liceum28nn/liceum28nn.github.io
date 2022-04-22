@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="fonts.css">
   <title>Document</title>
   <style>
 :root {
@@ -19,7 +20,7 @@
 *::after,
 *::before {
   box-sizing: padding-box;
-  font-family: "Times new roman", sans-serif;
+  font-family: "Roboto","Times new roman", sans-serif;
 }
 
 .vh,
@@ -60,7 +61,7 @@
   outline: 1px solid #000000;
   font-size: 24px;
   padding: 5px;
-  font-weight: 700;
+  /* font-weight: 400; */
   padding: 12px 20px 12px 20px;
   margin-right: 1px;
 }
@@ -103,7 +104,7 @@
   padding: 5px 13px;
   vertical-align: middle;
   text-align: center;
-  font-weight: 700;
+  /* font-weight: 700; */
 }
 
 .cabinet-table__table-cell:nth-child(1),
@@ -140,7 +141,7 @@
   border: 2px solid #000000;
   font-size: 24px;
   padding: 5px;
-  font-weight: 700;
+  /* font-weight: 700; */
   padding: 12px 20px 12px 20px;
   margin-right: 5px;
   margin-bottom: 2px;
@@ -180,16 +181,20 @@
   display: block;
 }
 
+/* linear-gradient(90deg,#29bd5b 20%,#51b91f 40%,#20d03a 60%,#65d261 80%) */
+
 .day__button-1:checked ~ .label__list .button-label__1,
 .day__button-2:checked ~ .label__list .button-label__2,
 .day__button-3:checked ~ .label__list .button-label__3,
 .day__button-4:checked ~ .label__list .button-label__4,
 .day__button-5:checked ~ .label__list .button-label__5,
 .day__button-6:checked ~ .label__list .button-label__6  {
-  background-color: #808080;
-  border: 2px double #808080;
-  outline-color: #ffffff;
-  outline-offset: -5px;
+  background-color: #65d261;
+  letter-spacing: 4px;
+  border: 10px double #29bd5b;
+  box-sizing: padding-box;
+  /* outline-color: #51b91f; */
+  /* outline-offset: -5px; */
   color: #ffffff;
   text-shadow: 1px 1px 1px #000000,
   1px -1px 1px #000000,
