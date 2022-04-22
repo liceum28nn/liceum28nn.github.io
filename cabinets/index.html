@@ -34,7 +34,7 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column-reverse;
-  /* flex-direction: column; */
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   height: 100vh;
@@ -51,9 +51,12 @@
   padding: 0;
   display: flex;
   margin-bottom: 5px;
-  /* position: fixed;
-  bottom: 0;
-  background: #ffffff; */
+}
+
+.label__list--fixed {
+  position: fixed;
+  top: 0;
+  background: #ffffff;
 }
 
 .label__list-item,
@@ -1729,37 +1732,31 @@ td.ta-l {
     <li class="list__item item__6 ">суббота
     </li>
   </ul>
+
   <script>
-    // const allItems = document.querySelectorAll('.list__item');
-    // const onClickChangeActive = (evt) => {
-    //   if (document.querySelector('.list__item--active')) {
-    //     document.querySelector('.list__item--active').classList.remove('list__item--active');
-    //     evt.target.classList.add('list__item--active');
-
-    //     const days = document.querySelectorAll('.day');
-
-    //     for (const day of days) {
-    //       if (!day.classList.contains('hidden')) {
-    //         day.classList.add('hidden');
-    //       }
-    //     }
-
-    //     const dayTitles = document.querySelectorAll('.cabinet-table__table-cell-day');
-    //     dayTitles.forEach( item => {
-    //       if (item.textContent === evt.target.textContent) {
-    //         return item.parentElement.classList.toggle('hidden');
-    //       }
-    //     })
-    //   }
-    // };
-
-    // for (const item of allItems) {
-    //   item.addEventListener('click',onClickChangeActive);
-    // }
     const url = `#day-${new Date().getDay()}`;
     if (document.querySelector(url)) {
       document.querySelector(url).checked = true;
     }
+
+    const onScrollFixedLabelList = () => {
+      const labelList = document.querySelector('.label__list');
+      if (pageYOffset >= 35 ) {
+        labelList.classList.add('label__list--fixed');
+      }
+
+      if (pageYOffset <= 35 ) {
+        labelList.classList.remove('label__list--fixed');
+      }
+    }
+
+    window.addEventListener('scroll',onScrollFixedLabelList);
+
+    // window.addEventListener('scroll', function() {
+    //   console.log(`${pageYOffset}`);
+    // });
+      // document.getElementById('showScroll').innerHTML = pageYOffset + 'px';
+
   </script>
 </body>
 </html>
