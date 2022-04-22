@@ -14,6 +14,7 @@
   --grey-2: #d9d9d9;
   --blue: #c9daf8;
 }
+
 *,
 *::after,
 *::before {
@@ -37,7 +38,7 @@
   align-items: center;
   height: 100vh;
   overflow: auto;
-  background-color: #fff;
+  background-color: transparent;
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAMAAAApB0NrAAAABlBMVEX///+pqalTpKl9AAAAAnRSTlMAGovxNEIAAAAdSURBVDjLY2AAAUaG4UYxDDsfjfp91O+jfqfE7wCzpQCw/dq+qQAAAABJRU5ErkJggg==');
 
 }
@@ -64,70 +65,68 @@
   margin-right: 1px;
 }
 
-.list__item--active1 {
+/* .list__item--active1 {
   background-color: #808080;
   border-color: #ffffff;
   outline-color: #ffffff;
-  color: #ffffff);
+  color: #ffffff;
   text-shadow: 1px 1px 1px #000000,
   1px -1px 1px #000000,
   -1px 1px 1px #000000,
   -1px -1px 1px #000000;
-}
+} */
 
-.day__title {
+.cabinet-table__table-cell-day {
   text-transform: uppercase;
   width: 100%;
   text-align: center;
   font-size: 36px;
 }
-.table-title {
-  font-size: 44px;
-}
-.table-title-2 {
+
+.cabinet-table__table-subtitle {
   font-size: 36px;
 }
-
-
 
 .cabinet-table {
   /* outline-offset: -1px; */
   /* border: 1px solid #000000; */
   font-size: 22px;
-  border-collapse: collapse;
+  border-collapse: separate;
   margin-bottom: 20px;
 }
 
-.cabinet-table td {
+/* .cabinet-table td { */
+.cabinet-table__cell {
   border: 2px solid #000000;
-  padding: 5px 15px;
+  padding: 5px 13px;
   vertical-align: middle;
   text-align: center;
   font-weight: 700;
 }
 
+.cabinet-table__table-cell:nth-child(1),
 .cabinet-table td:nth-child(1) {
   min-width: 29px;
   /* background: red; */
 }
 
-.special-lesson {
+.abinet-table__table--special-lesson {
   font-size: 20px;
-  min-width: 100%;
-  padding: 0;
+  /* min-width: 100%; */
+  padding: 5px;
 }
-.bg-orange {
+.cabinet-table__table--orange {
   background-color: #fbbc04;
 }
 
-.bg-grey-2 {
+.cabinet-table__table--grey {
   background-color: #d9d9d9;
 }
-.bg-blue {
+.cabinet-table__table--blue {
   background-color: #c9daf8;
 }
 
-.bg-blue-2 {
+.cabinet-table__table--blue-2 {
   background-color: #9fc5e8;
 }
 
@@ -178,6 +177,7 @@
 .day__button-6:checked ~ .day-6 {
   display: block;
 }
+
 .day__button-1:checked ~ .label__list .button-label__1,
 .day__button-2:checked ~ .label__list .button-label__2,
 .day__button-3:checked ~ .label__list .button-label__3,
@@ -195,17 +195,16 @@
   -1px -1px 1px #000000;
 }
 
-
-td.hide-cell {
+.cabinet-table__table--hidden {
   outline-color: transparent;
   border-color: transparent;
 }
 
-td.br-2 {
+.cabinet-table__table--border-2 {
   border: 2px solid #000000;
 }
 
-td.of-0 {
+.cabinet-table__table--outline-0 {
   outline-offset: 0;
 }
 
@@ -213,8 +212,8 @@ td.ta-l {
   text-align: left;
 }
 
-td.ol-2 {
-  outline-offset: -1px;
+.cabinet-table__table--outline-2 {
+  outline-offset: -2px;
   outline: 2px solid #000000;
 }
 
@@ -239,1478 +238,1473 @@ td.ol-2 {
     <label class="day__button-label button-label__6" for="day-6">суббота</label>
    </ul>
   <div class="day day-1">
-    <h1 class="day__title vh">понедельник</h1>
+    <h1 class="cabinet-table__table-cell-day vh">понедельник</h1>
     <table class="cabinet-table">
       <tr>
-        <td class="table-title-2" colspan="16">1-ая смена</td>
+        <td class="cabinet-table__cell cabinet-table__table-subtitle" colspan="16">1-ая смена</td>
       </tr>
       <tr>
-        <td>№</td>
-        <td>5А</td>
-        <td>5Б</td>
-        <td>5В</td>
-        <td>5Г</td>
-        <td>8А</td>
-        <td>8Б</td>
-        <td>8В</td>
-        <td>9А</td>
-        <td>9Б</td>
-        <td>10А</td>
-        <td>10Б</td>
-        <td>10В</td>
-        <td>11А</td>
-        <td>11Б</td>
-        <td>11В</td>
+        <td class="cabinet-table__cell">№</td>
+        <td class="cabinet-table__cell">5А</td>
+        <td class="cabinet-table__cell">5Б</td>
+        <td class="cabinet-table__cell">5В</td>
+        <td class="cabinet-table__cell">5Г</td>
+        <td class="cabinet-table__cell">8А</td>
+        <td class="cabinet-table__cell">8Б</td>
+        <td class="cabinet-table__cell">8В</td>
+        <td class="cabinet-table__cell">9А</td>
+        <td class="cabinet-table__cell">9Б</td>
+        <td class="cabinet-table__cell">10А</td>
+        <td class="cabinet-table__cell">10Б</td>
+        <td class="cabinet-table__cell">10В</td>
+        <td class="cabinet-table__cell">11А</td>
+        <td class="cabinet-table__cell">11Б</td>
+        <td class="cabinet-table__cell">11В</td>
       </tr>
       <tr>
-        <td class="cabinet-table__first-column">1.</td>
-        <td>17</td>
-        <td>14</td>
-        <td>15</td>
-        <td>16</td>
-        <td>12</td>
-        <td>8</td>
-        <td>9</td>
-        <td>22</td>
-        <td>20</td>
-        <td>10</td>
-        <td>7</td>
-        <td>21</td>
-        <td class="bg-orange" colspan="3">ко 2-му уроку</td>
+        <td class="cabinet-table__cell  cabinet-table__first-column">1.</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell">8</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">21</td>
+        <td class="cabinet-table__table--orange" colspan="3">ко 2-му уроку</td>
       </tr>
       <tr>
-        <td>2.</td>
-        <td>17</td>
-        <td>14</td>
-        <td>16</td>
-        <td>зал</td>
-        <td class="bg-blue">18,19</td>
-        <td>12</td>
-        <td>20</td>
-        <td>22</td>
-        <td>9</td>
-        <td>10</td>
-        <td>7</td>
-        <td>15</td>
-        <td>6</td>
-        <td>8</td>
-        <td>21</td>
+        <td class="cabinet-table__cell">2.</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell cabinet-table__table--blue">18,19</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">6</td>
+        <td class="cabinet-table__cell">8</td>
+        <td class="cabinet-table__cell">21</td>
       </tr>
       <tr>
-        <td>3.</td>
-        <td>7</td>
-        <td>17</td>
-        <td>14</td>
-        <td>9</td>
-        <td>15</td>
-        <td>5</td>
-        <td>20</td>
-        <td>12</td>
-        <td>зал</td>
-        <td>8</td>
-        <td>10</td>
-        <td>22</td>
-        <td>6</td>
-        <td>16</td>
-        <td>21</td>
+        <td class="cabinet-table__cell">3.</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">8</td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell">6</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">21</td>
       </tr>
       <tr>
-        <td>4.</td>
-        <td>20</td>
-        <td>17</td>
-        <td>5</td>
-        <td>21</td>
-        <td>14</td>
-        <td>16</td>
-        <td class="bg-blue">18,19</td>
-        <td>9</td>
-        <td>12</td>
-        <td>15</td>
-        <td>10</td>
-        <td>22</td>
-        <td>16</td>
-        <td>7</td>
-        <td>6</td>
+        <td class="cabinet-table__cell">4.</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">21</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell cabinet-table__table--blue">18,19</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">6</td>
       </tr>
       <tr>
-        <td>5.</td>
-        <td>зал</td>
-        <td>8</td>
-        <td>20</td>
-        <td>9</td>
-        <td>15</td>
-        <td>14</td>
-        <td>5</td>
-        <td class="bg-blue">18,19</td>
-        <td>17</td>
-        <td>22</td>
-        <td>12</td>
-        <td>10</td>
-        <td>16</td>
-        <td>7</td>
-        <td>6</td>
+        <td class="cabinet-table__cell">5.</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">8</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell cabinet-table__table--blue">18,19</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">6</td>
       </tr>
       <tr>
-        <td>6.</td>
-        <td>14</td>
-        <td>зал</td>
-        <td></td>
-        <td>7</td>
-        <td>20</td>
-        <td>5</td>
-        <td>16</td>
-        <td>17</td>
-        <td class="bg-blue">18,19</td>
-        <td>22</td>
-        <td>12</td>
-        <td>10</td>
-        <td>15</td>
-        <td>6</td>
-        <td>8</td>
+        <td class="cabinet-table__cell">6.</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell cabinet-table__table--blue">18,19</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">6</td>
+        <td class="cabinet-table__cell">8</td>
       </tr>
       <tr>
-        <td>7.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>10</td>
-        <td>6</td>
-        <td>22</td>
+        <td class="cabinet-table__cell">7.</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell">6</td>
+        <td class="cabinet-table__cell">22</td>
       </tr>
       <tr>
-        <td>с/к</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td colspan="3" class="special-lesson">20 Баринова М.В.</td>
-        <td class="special-lesson">22 Анурина О.А.</td>
-        <td></td>
-        <td colspan="3"  class="special-lesson">9 Демина М.Ю.</td>
-        <td colspan="3" class="special-lesson">10 Маркина О.С.</td>
+        <td class="cabinet-table__cell">с/к</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td colspan="3" class="cabinet-table__cell сabinet-table__table--special-lesson">20 Баринова М.В.</td>
+        <td class="cabinet-table__cell abinet-table__table--special-lesson">22 Анурина О.А.</td>
+        <td class="cabinet-table__cell"></td>
+        <td colspan="3"  class="cabinet-table__cell abinet-table__table--special-lesson">9 Демина М.Ю.</td>
+        <td colspan="3" class="cabinet-table__cell abinet-table__table--special-lesson">10 Маркина О.С.</td>
       </tr>
       <tr>
-        <td></td>
-        <td colspan="6">2-ая смена</td>
-        <td class="hide-cell"></td>
-        <td class="br-2  ol-2">с/к</td>
-        <td class="br-2">спецкурс</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell" colspan="6">2-ая смена</td>
+        <td class="cabinet-table__table cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__cell cabinet-table__table--border-2  cabinet-table__table--outline-2">с/к</td>
+        <td class="cabinet-table__cell cabinet-table__table--border-2">спецкурс</td>
       </tr>
       <tr>
-        <td>№</td>
-        <td>6А</td>
-        <td>6Б</td>
-        <td>6В</td>
-        <td>7А</td>
-        <td>7Б</td>
-        <td>7В</td>
+        <td class="cabinet-table__cell">№</td>
+        <td class="cabinet-table__cell">6А</td>
+        <td class="cabinet-table__cell">6Б</td>
+        <td class="cabinet-table__cell">6В</td>
+        <td class="cabinet-table__cell">7А</td>
+        <td class="cabinet-table__cell">7Б</td>
+        <td class="cabinet-table__cell">7В</td>
       </tr>
       <tr>
-        <td>1.</td>
-        <td>17</td>
-        <td>21</td>
-        <td>15</td>
-        <td>12</td>
-        <td>16</td>
-        <td>8</td>
-        <td class="hide-cell"></td>
-        <td class="of-0 ol-2 bg-blue">Инф.</td>
-        <td class="of-0">18</td>
-        <td class="of-0 ta-l" colspan="4">Кошелев И.А.</td>
+        <td class="cabinet-table__cell">1.</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">21</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">8</td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0 cabinet-table__table--outline-2 cabinet-table__table--blue">Инф.</td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-2 ">18</td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-2 cabinet-table__table--outline-0 ta-l" colspan="4">Кошелев И.А.</td>
       </tr>
       <tr>
-        <td>2.</td>
-        <td>15</td>
-        <td>17</td>
-        <td>14</td>
-        <td>8</td>
-        <td>9</td>
-        <td>16</td>
-        <td class="hide-cell"></td>
-        <td class="of-0  ol-2"></td>
-        <td class="of-0">19</td>
-        <td class="of-0 ta-l" colspan="4">Беспалова М.В.</td>
+        <td class="cabinet-table__cell">2.</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">8</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0  cabinet-table__table--outline-2"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-2 cabinet-table__table--outline-0">19</td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0 ta-l" colspan="4">Беспалова М.В.</td>
       </tr>
       <tr>
-        <td>3.</td>
-        <td>7</td>
-        <td>17</td>
-        <td>15</td>
-        <td>9</td>
-        <td>8</td>
-        <td>16</td>
+        <td class="cabinet-table__cell">3.</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">8</td>
+        <td class="cabinet-table__cell">16</td>
       </tr>
       <tr>
-        <td>4.</td>
-        <td>14</td>
-        <td>17</td>
-        <td>8</td>
-        <td>зал</td>
-        <td>7</td>
-        <td>9</td>
+        <td class="cabinet-table__cell">4.</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">8</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">9</td>
       </tr>
       <tr>
-        <td>5.</td>
-        <td>17</td>
-        <td>8</td>
-        <td>14</td>
-        <td>15</td>
-        <td>зал</td>
-        <td>7</td>
+        <td class="cabinet-table__cell">5.</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">8</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">7</td>
       </tr>
       <tr>
-        <td>6.</td>
-        <td>8</td>
-        <td></td>
-        <td>14</td>
-        <td>7</td>
-        <td>17</td>
-        <td>зал</td>
+        <td class="cabinet-table__cell">6.</td>
+        <td class="cabinet-table__cell">8</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">зал</td>
       </tr>
     </table>
 
   </div>
   <div class="day day-2">
-    <h1 class="day__title vh">вторник</h1>
+    <h1 class="cabinet-table__table-cell-day vh">вторник</h1>
     <table class="cabinet-table">
       <tr>
-        <td class="table-title-2" colspan="16">1-ая смена</td>
+        <td class="cabinet-table__cell cabinet-table__table-subtitle" colspan="16">1-ая смена</td>
       </tr>
       <tr>
-        <td>№</td>
-        <td>5А</td>
-        <td>5Б</td>
-        <td>5В</td>
-        <td>5Г</td>
-        <td>8А</td>
-        <td>8Б</td>
-        <td>8В</td>
-        <td>9А</td>
-        <td>9Б</td>
-        <td>10А</td>
-        <td>10Б</td>
-        <td>10В</td>
-        <td>11А</td>
-        <td>11Б</td>
-        <td>11В</td>
+        <td class="cabinet-table__cell">№</td>
+        <td class="cabinet-table__cell">5А</td>
+        <td class="cabinet-table__cell">5Б</td>
+        <td class="cabinet-table__cell">5В</td>
+        <td class="cabinet-table__cell">5Г</td>
+        <td class="cabinet-table__cell">8А</td>
+        <td class="cabinet-table__cell">8Б</td>
+        <td class="cabinet-table__cell">8В</td>
+        <td class="cabinet-table__cell">9А</td>
+        <td class="cabinet-table__cell">9Б</td>
+        <td class="cabinet-table__cell">10А</td>
+        <td class="cabinet-table__cell">10Б</td>
+        <td class="cabinet-table__cell">10В</td>
+        <td class="cabinet-table__cell">11А</td>
+        <td class="cabinet-table__cell">11Б</td>
+        <td class="cabinet-table__cell">11В</td>
       </tr>
       <tr>
-        <td class="cabinet-table__first-column">1.</td>
-        <td>зал</td>
-        <td>17</td>
-        <td>14</td>
-        <td>15</td>
-        <td>9</td>
-        <td>7</td>
-        <td>16</td>
-        <td>22</td>
-        <td class="bg-grey-2">8,18</td>
-        <td>5</td>
-        <td>12</td>
-        <td>21</td>
-        <td class="bg-orange" colspan="3">ко 2-му уроку</td>
+        <td class="cabinet-table__cell cabinet-table__first-column">1.</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,18</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell">21</td>
+        <td class="cabinet-table__table--orange" colspan="3">ко 2-му уроку</td>
       </tr>
       <tr>
-        <td>2.</td>
-        <td>17</td>
-        <td>зал</td>
-        <td>16</td>
-        <td>15</td>
-        <td>12</td>
-        <td class="bg-grey-2">8,18</td>
-        <td>20</td>
-        <td>22</td>
-        <td>7</td>
-        <td>9</td>
-        <td>5</td>
-        <td>21</td>
-        <td>6</td>
-        <td>14</td>
-        <td>10</td>
+        <td class="cabinet-table__cell">2.</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,18</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">21</td>
+        <td class="cabinet-table__cell">6</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">10</td>
       </tr>
       <tr>
-        <td>3.</td>
-        <td>16</td>
-        <td>9</td>
-        <td>15</td>
-        <td>17</td>
-        <td>21</td>
-        <td>12</td>
-        <td>20</td>
-        <td>7</td>
-        <td>5</td>
-        <td>зал</td>
-        <td>18</td>
-        <td>10</td>
-        <td>6</td>
-        <td>14</td>
-        <td>22</td>
+        <td class="cabinet-table__cell">3.</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">21</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">18</td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell">6</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">22</td>
       </tr>
       <tr>
-        <td>4.</td>
-        <td>20</td>
-        <td>9</td>
-        <td>зал</td>
-        <td>16</td>
-        <td>7</td>
-        <td>12</td>
-        <td class="bg-grey-2">8,18</td>
-        <td>22</td>
-        <td>17</td>
-        <td>14</td>
-        <td>10</td>
-        <td>5</td>
-        <td>15</td>
-        <td>6</td>
-        <td>18,21</td>
+        <td class="cabinet-table__cell">4.</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,18</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">6</td>
+        <td class="cabinet-table__cell">18,21</td>
       </tr>
       <tr>
-        <td>5.</td>
-        <td>21</td>
-        <td>10</td>
-        <td>14</td>
-        <td>17</td>
-        <td class="bg-grey-2">8,19</td>
-        <td>16</td>
-        <td>зал</td>
-        <td>12</td>
-        <td>20</td>
-        <td>15</td>
-        <td>7</td>
-        <td>9</td>
-        <td>22</td>
-        <td>6</td>
-        <td>5</td>
+        <td class="cabinet-table__cell">5.</td>
+        <td class="cabinet-table__cell">21</td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,19</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell">6</td>
+        <td class="cabinet-table__cell">5</td>
       </tr>
       <tr>
-        <td>6.</td>
-        <td>21</td>
-        <td>16</td>
-        <td>17</td>
-        <td>20</td>
-        <td>15</td>
-        <td>зал</td>
-        <td>14</td>
-        <td>22</td>
-        <td></td>
-        <td>10</td>
-        <td>9</td>
-        <td>7</td>
-        <td class="bg-grey-2">18,19</td>
-        <td>5</td>
-        <td>6</td>
+        <td class="cabinet-table__cell">6.</td>
+        <td class="cabinet-table__cell">21</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">18,19</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">6</td>
       </tr>
       <tr>
-        <td>7.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>22</td>
-        <td></td>
-        <td>6</td>
+        <td class="cabinet-table__cell">7.</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell">6</td>
       </tr>
       <tr>
-        <td>с/к</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td class="special-lesson">12 Мозалевская Л.В.</td>
-        <td class="special-lesson">5 Доманин А.А.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td class="bg-grey-2">18,19</td>
-        <td>5</td>
-        <td>6</td>
+        <td class="cabinet-table__cell">с/к</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell abinet-table__table--special-lesson">12 Мозалевская Л.В.</td>
+        <td class="cabinet-table__cell abinet-table__table--special-lesson">5 Доманин А.А.</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">18,19</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">6</td>
       </tr>
       <tr>
-        <td>с/к</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td colspan="3" class="special-lesson">21 Демашова Ю.А.</td>
-        <td colspan="3" class="special-lesson">10 Бакулина Г.С.</td>
+        <td class="cabinet-table__cell">с/к</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td colspan="3" class="cabinet-table__cell abinet-table__table--special-lesson">21 Демашова Ю.А.</td>
+        <td colspan="3" class="cabinet-table__cell abinet-table__table--special-lesson">10 Бакулина Г.С.</td>
       </tr>
       <tr>
-        <td colspan="16"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell" colspan="6">2-ая смена</td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__cell cabinet-table__table--border-2">с/к</td>
+        <td class="cabinet-table__cell cabinet-table__table--border-2">спецкурс</td>
       </tr>
       <tr>
-        <td></td>
-        <td colspan="6">2-ая смена</td>
-        <td class="hide-cell"></td>
-        <td class="br-2">с/к</td>
-        <td class="br-2">спецкурс</td>
+        <td class="cabinet-table__cell">№</td>
+        <td class="cabinet-table__cell">6А</td>
+        <td class="cabinet-table__cell">6Б</td>
+        <td class="cabinet-table__cell">6В</td>
+        <td class="cabinet-table__cell">7А</td>
+        <td class="cabinet-table__cell">7Б</td>
+        <td class="cabinet-table__cell">7В</td>
       </tr>
       <tr>
-        <td>№</td>
-        <td>6А</td>
-        <td>6Б</td>
-        <td>6В</td>
-        <td>7А</td>
-        <td>7Б</td>
-        <td>7В</td>
+        <td class="cabinet-table__cell">1</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,19</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0 cabinet-table__table--grey">Англ. яз.</td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0">8</td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0 ta-l" colspan="4">Зыкина И.А.</td>
       </tr>
       <tr>
-        <td>1</td>
-        <td>14</td>
-        <td>17</td>
-        <td>12</td>
-        <td class="bg-grey-2">8,19</td>
-        <td>20</td>
-        <td>7</td>
-        <td class="hide-cell"></td>
-        <td class="of-0 bg-grey-2">Англ. яз.</td>
-        <td class="of-0">8</td>
-        <td class="of-0 ta-l" colspan="4">Зыкина И.А.</td>
+        <td class="cabinet-table__cell">2</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,19</td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0">18</td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0 ta-l" colspan="4">Сельверова Н.А.</td>
       </tr>
       <tr>
-        <td>2</td>
-        <td>14</td>
-        <td>17</td>
-        <td>15</td>
-        <td>20</td>
-        <td>7</td>
-        <td class="bg-grey-2">8,19</td>
-        <td class="hide-cell"></td>
-        <td class="of-0"></td>
-        <td class="of-0">18</td>
-        <td class="of-0 ta-l" colspan="4">Сельверова Н.А.</td>
+        <td class="cabinet-table__cell">3</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,19</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0">19</td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0 ta-l" colspan="4">Байданова С.Г.</td>
       </tr>
       <tr>
-        <td>3</td>
-        <td>5</td>
-        <td>20</td>
-        <td>15</td>
-        <td>7</td>
-        <td class="bg-grey-2">8,19</td>
-        <td>16</td>
-        <td class="hide-cell"></td>
-        <td class="of-0"></td>
-        <td class="of-0">19</td>
-        <td class="of-0 ta-l" colspan="4">Байданова С.Г.</td>
+        <td class="cabinet-table__cell">4</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">21</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0">21</td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0 ta-l" colspan="4">Кайтанба М.В.</td>
       </tr>
       <tr>
-        <td>4</td>
-        <td>20</td>
-        <td>5</td>
-        <td>21</td>
-        <td>15</td>
-        <td>7</td>
-        <td>16</td>
-        <td class="hide-cell"></td>
-        <td class="of-0"></td>
-        <td class="of-0">21</td>
-        <td class="of-0 ta-l" colspan="4">Кайтанба М.В.</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">8</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">8</td>
       </tr>
       <tr>
-        <td>5</td>
-        <td>5</td>
-        <td>20</td>
-        <td>7</td>
-        <td>8</td>
-        <td>16</td>
-        <td>8</td>
-      </tr>
-      <tr>
-        <td>6</td>
-        <td>15</td>
-        <td>7</td>
-        <td>20</td>
-        <td>5</td>
-        <td>16</td>
-        <td>8</td>
+        <td class="cabinet-table__cell">6</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">8</td>
       </tr>
     </table>
   </div>
   <div class="day day-3">
-    <h1 class="day__title vh">среда</h1>
+    <h1 class="cabinet-table__table-cell-day vh">среда</h1>
     <table class="cabinet-table">
       <tr>
-        <td class="table-title-2" colspan="16">1-ая смена</td>
+        <td class="cabinet-table__cell cabinet-table__table-subtitle" colspan="16">1-ая смена</td>
       </tr>
       <tr>
-        <td>№</td>
-        <td>5А</td>
-        <td>5Б</td>
-        <td>5В</td>
-        <td>5Г</td>
-        <td>8А</td>
-        <td>8Б</td>
-        <td>8В</td>
-        <td>9А</td>
-        <td>9Б</td>
-        <td>10А</td>
-        <td>10Б</td>
-        <td>10В</td>
-        <td>11А</td>
-        <td>11Б</td>
-        <td>11В</td>
+        <td class="cabinet-table__cell">№</td>
+        <td class="cabinet-table__cell">5А</td>
+        <td class="cabinet-table__cell">5Б</td>
+        <td class="cabinet-table__cell">5В</td>
+        <td class="cabinet-table__cell">5Г</td>
+        <td class="cabinet-table__cell">8А</td>
+        <td class="cabinet-table__cell">8Б</td>
+        <td class="cabinet-table__cell">8В</td>
+        <td class="cabinet-table__cell">9А</td>
+        <td class="cabinet-table__cell">9Б</td>
+        <td class="cabinet-table__cell">10А</td>
+        <td class="cabinet-table__cell">10Б</td>
+        <td class="cabinet-table__cell">10В</td>
+        <td class="cabinet-table__cell">11А</td>
+        <td class="cabinet-table__cell">11Б</td>
+        <td class="cabinet-table__cell">11В</td>
       </tr>
       <tr>
-        <td class="cabinet-table__first-column">1.</td>
-        <td>зал</td>
-        <td>17</td>
-        <td>14</td>
-        <td>15</td>
-        <td>9</td>
-        <td>7</td>
-        <td>16</td>
-        <td>22</td>
-        <td class="bg-grey-2">8,18</td>
-        <td>5</td>
-        <td>12</td>
-        <td>21</td>
-        <td class="bg-orange" colspan="3">ко 2-му уроку</td>
+        <td class="cabinet-table__cell cabinet-table__first-column">1.</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,18</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell">21</td>
+        <td class="cabinet-table__table--orange" colspan="3">ко 2-му уроку</td>
       </tr>
       <tr>
-        <td>2.</td>
-        <td>17</td>
-        <td>зал</td>
-        <td>16</td>
-        <td>15</td>
-        <td>12</td>
-        <td class="bg-grey-2">8,18</td>
-        <td>20</td>
-        <td>22</td>
-        <td>7</td>
-        <td>9</td>
-        <td>5</td>
-        <td>21</td>
-        <td>6</td>
-        <td>14</td>
-        <td>10</td>
+        <td class="cabinet-table__cell">2.</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,18</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">21</td>
+        <td class="cabinet-table__cell">6</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">10</td>
       </tr>
       <tr>
-        <td>3.</td>
-        <td>16</td>
-        <td>9</td>
-        <td>15</td>
-        <td>17</td>
-        <td>21</td>
-        <td>12</td>
-        <td>20</td>
-        <td>7</td>
-        <td>5</td>
-        <td>зал</td>
-        <td>18</td>
-        <td>10</td>
-        <td>6</td>
-        <td>14</td>
-        <td>22</td>
+        <td class="cabinet-table__cell">3.</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">21</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">18</td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell">6</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">22</td>
       </tr>
       <tr>
-        <td>4.</td>
-        <td>20</td>
-        <td>9</td>
-        <td>зал</td>
-        <td>16</td>
-        <td>7</td>
-        <td>12</td>
-        <td class="bg-grey-2">8,18</td>
-        <td>22</td>
-        <td>17</td>
-        <td>14</td>
-        <td>10</td>
-        <td>5</td>
-        <td>15</td>
-        <td>6</td>
-        <td>18,21</td>
+        <td class="cabinet-table__cell">4.</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,18</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">6</td>
+        <td class="cabinet-table__cell">18,21</td>
       </tr>
       <tr>
-        <td>5.</td>
-        <td>21</td>
-        <td>10</td>
-        <td>14</td>
-        <td>17</td>
-        <td class="bg-grey-2">8,19</td>
-        <td>16</td>
-        <td>зал</td>
-        <td>12</td>
-        <td>20</td>
-        <td>15</td>
-        <td>7</td>
-        <td>9</td>
-        <td>22</td>
-        <td>6</td>
-        <td>5</td>
+        <td class="cabinet-table__cell">5.</td>
+        <td class="cabinet-table__cell">21</td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,19</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell">6</td>
+        <td class="cabinet-table__cell">5</td>
       </tr>
       <tr>
-        <td>6.</td>
-        <td>21</td>
-        <td>16</td>
-        <td>17</td>
-        <td>20</td>
-        <td>15</td>
-        <td>зал</td>
-        <td>14</td>
-        <td>22</td>
-        <td></td>
-        <td>10</td>
-        <td>9</td>
-        <td>7</td>
-        <td class="bg-grey-2">18,19</td>
-        <td>5</td>
-        <td>6</td>
+        <td class="cabinet-table__cell">6.</td>
+        <td class="cabinet-table__cell">21</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">18,19</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">6</td>
       </tr>
       <tr>
-        <td>7.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>22</td>
-        <td></td>
-        <td>6</td>
+        <td class="cabinet-table__cell">7.</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell">6</td>
       </tr>
       <tr>
-        <td>с/к</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td class="special-lesson">12 Мозалевская Л.В.</td>
-        <td class="special-lesson">5 Доманин А.А.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td class="bg-grey-2">18,19</td>
-        <td>5</td>
-        <td>6</td>
+        <td class="cabinet-table__cell">с/к</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell abinet-table__table--special-lesson">12 Мозалевская Л.В.</td>
+        <td class="cabinet-table__cell abinet-table__table--special-lesson">5 Доманин А.А.</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">18,19</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">6</td>
       </tr>
       <tr>
-        <td>с/к</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td colspan="3" class="special-lesson">21 Демашова Ю.А.</td>
-        <td colspan="3" class="special-lesson">10 Бакулина Г.С.</td>
+        <td class="cabinet-table__cell">с/к</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td colspan="3" class="cabinet-table__cell abinet-table__table--special-lesson">21 Демашова Ю.А.</td>
+        <td colspan="3" class="cabinet-table__cell abinet-table__table--special-lesson">10 Бакулина Г.С.</td>
       </tr>
       <tr>
-        <td></td>
-        <td colspan="6">2-ая смена</td>
-        <td class="hide-cell"></td>
-        <td class="br-2">с/к</td>
-        <td class="br-2">спецкурс</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell" colspan="6">2-ая смена</td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__cell cabinet-table__table--border-2">с/к</td>
+        <td class="cabinet-table__cell cabinet-table__table--border-2">спецкурс</td>
       </tr>
       <tr>
-        <td>№</td>
-        <td>6А</td>
-        <td>6Б</td>
-        <td>6В</td>
-        <td>7А</td>
-        <td>7Б</td>
-        <td>7В</td>
+        <td class="cabinet-table__cell">№</td>
+        <td class="cabinet-table__cell">6А</td>
+        <td class="cabinet-table__cell">6Б</td>
+        <td class="cabinet-table__cell">6В</td>
+        <td class="cabinet-table__cell">7А</td>
+        <td class="cabinet-table__cell">7Б</td>
+        <td class="cabinet-table__cell">7В</td>
       </tr>
       <tr>
-        <td>1</td>
-        <td>14</td>
-        <td>17</td>
-        <td>12</td>
-        <td class="bg-grey-2">8,19</td>
-        <td>20</td>
-        <td>7</td>
-        <td class="hide-cell"></td>
-        <td class="of-0 bg-grey-2">Англ. яз.</td>
-        <td class="of-0">8</td>
-        <td class="of-0 ta-l" colspan="4">Зыкина И.А.</td>
+        <td class="cabinet-table__cell">1</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,19</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0 cabinet-table__table--grey">Англ. яз.</td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0">8</td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0 ta-l" colspan="4">Зыкина И.А.</td>
       </tr>
       <tr>
-        <td>2</td>
-        <td>14</td>
-        <td>17</td>
-        <td>15</td>
-        <td>20</td>
-        <td>7</td>
-        <td class="bg-grey-2">8,19</td>
-        <td class="hide-cell"></td>
-        <td class="of-0"></td>
-        <td class="of-0">18</td>
-        <td class="of-0 ta-l" colspan="4">Сельверова Н.А.</td>
+        <td class="cabinet-table__cell">2</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,19</td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0">18</td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0 ta-l" colspan="4">Сельверова Н.А.</td>
       </tr>
       <tr>
-        <td>3</td>
-        <td>5</td>
-        <td>20</td>
-        <td>15</td>
-        <td>7</td>
-        <td class="bg-grey-2">8,19</td>
-        <td>16</td>
-        <td class="hide-cell"></td>
-        <td class="of-0"></td>
-        <td class="of-0">19</td>
-        <td class="of-0 ta-l" colspan="4">Байданова С.Г.</td>
+        <td class="cabinet-table__cell">3</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,19</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0">19</td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0 ta-l" colspan="4">Байданова С.Г.</td>
       </tr>
       <tr>
-        <td>4</td>
-        <td>20</td>
-        <td>5</td>
-        <td>21</td>
-        <td>15</td>
-        <td>7</td>
-        <td>16</td>
-        <td class="hide-cell"></td>
-        <td class="of-0"></td>
-        <td class="of-0">21</td>
-        <td class="of-0 ta-l" colspan="4">Кайтанба М.В.</td>
+        <td class="cabinet-table__cell">4</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">21</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0">21</td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0 ta-l" colspan="4">Кайтанба М.В.</td>
       </tr>
       <tr>
-        <td>5</td>
-        <td>5</td>
-        <td>20</td>
-        <td>7</td>
-        <td>8</td>
-        <td>16</td>
-        <td>8</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">8</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">8</td>
       </tr>
       <tr>
-        <td>6</td>
-        <td>15</td>
-        <td>7</td>
-        <td>20</td>
-        <td>5</td>
-        <td>16</td>
-        <td>8</td>
+        <td class="cabinet-table__cell">6</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">8</td>
       </tr>
     </table>
   </div>
   <div class="day day-4">
-    <h1 class="day__title vh">четверг</h1>
+    <h1 class="cabinet-table__table-cell-day vh">четверг</h1>
     <table class="cabinet-table">
       <tr>
-        <td class="table-title-2" colspan="16">1-ая смена</td>
+        <td class="cabinet-table__cell cabinet-table__table-subtitle" colspan="16">1-ая смена</td>
       </tr>
       <tr>
-        <td>№</td>
-        <td>5А</td>
-        <td>5Б</td>
-        <td>5В</td>
-        <td>5Г</td>
-        <td>8А</td>
-        <td>8Б</td>
-        <td>8В</td>
-        <td>9А</td>
-        <td>9Б</td>
-        <td>10А</td>
-        <td>10Б</td>
-        <td>10В</td>
-        <td>11А</td>
-        <td>11Б</td>
-        <td>11В</td>
+        <td class="cabinet-table__cell">№</td>
+        <td class="cabinet-table__cell">5А</td>
+        <td class="cabinet-table__cell">5Б</td>
+        <td class="cabinet-table__cell">5В</td>
+        <td class="cabinet-table__cell">5Г</td>
+        <td class="cabinet-table__cell">8А</td>
+        <td class="cabinet-table__cell">8Б</td>
+        <td class="cabinet-table__cell">8В</td>
+        <td class="cabinet-table__cell">9А</td>
+        <td class="cabinet-table__cell">9Б</td>
+        <td class="cabinet-table__cell">10А</td>
+        <td class="cabinet-table__cell">10Б</td>
+        <td class="cabinet-table__cell">10В</td>
+        <td class="cabinet-table__cell">11А</td>
+        <td class="cabinet-table__cell">11Б</td>
+        <td class="cabinet-table__cell">11В</td>
       </tr>
       <tr>
-        <td class="cabinet-table__first-column">1.</td>
-        <td class="bg-grey-2 ">18,19</td>
-        <td>17</td>
-        <td>15</td>
-        <td>16</td>
-        <td>5</td>
-        <td>9</td>
-        <td>12</td>
-        <td>зал</td>
-        <td>14</td>
-        <td>22</td>
-        <td>10</td>
-        <td>21</td>
-        <td class="bg-orange" colspan="3">ко 2-му уроку</td>
+        <td class="cabinet-table__cell cabinet-table__first-column">1.</td>
+        <td class="cabinet-table__table--grey ">18,19</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell">21</td>
+        <td class="cabinet-table__table--orange" colspan="3">ко 2-му уроку</td>
       </tr>
       <tr>
-        <td>2.</td>
-        <td>7</td>
-        <td>17</td>
-        <td>16</td>
-        <td>15</td>
-        <td>14</td>
-        <td class="bg-grey-2">8,18</td>
-        <td>9</td>
-        <td>5</td>
-        <td>12</td>
-        <td>22</td>
-        <td>20</td>
-        <td>10</td>
-        <td>6</td>
-        <td>зал</td>
-        <td>21</td>
+        <td class="cabinet-table__cell">2.</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,18</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell">6</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">21</td>
       </tr>
       <tr>
-        <td>3.</td>
-        <td>16</td>
-        <td class="bg-grey-2">7,18</td>
-        <td>12</td>
-        <td>14</td>
-        <td>20</td>
-        <td>зал</td>
-        <td class="bg-grey-2">8,19</td>
-        <td>15</td>
-        <td>17</td>
-        <td>6</td>
-        <td>5</td>
-        <td>22</td>
-        <td>10</td>
-        <td>9</td>
-        <td>21</td>
+        <td class="cabinet-table__cell">3.</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">7,18</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,19</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">6</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">21</td>
       </tr>
       <tr>
-        <td>4.</td>
-        <td>17</td>
-        <td>7</td>
-        <td>зал</td>
-        <td>10</td>
-        <td class="bg-grey-2">8,19</td>
-        <td>12</td>
-        <td>15</td>
-        <td class="bg-grey-2">18,21</td>
-        <td>20</td>
-        <td>6</td>
-        <td>5</td>
-        <td>22</td>
-        <td>9</td>
-        <td>16</td>
-        <td>14</td>
+        <td class="cabinet-table__cell">4.</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,19</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">18,21</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">6</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">14</td>
       </tr>
       <tr>
-        <td>5.</td>
-        <td>14</td>
-        <td>12</td>
-        <td>21</td>
-        <td class="bg-grey-2">4,8</td>
-        <td>9</td>
-        <td>16</td>
-        <td>20</td>
-        <td>17</td>
-        <td>5</td>
-        <td class="bg-grey-2">18,19</td>
-        <td>22</td>
-        <td>6</td>
-        <td>15</td>
-        <td>7</td>
-        <td>10</td>
+        <td class="cabinet-table__cell">5.</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell">21</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">4,8</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">18,19</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell">6</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">10</td>
       </tr>
       <tr>
-        <td>6.</td>
-        <td>20</td>
-        <td>12</td>
-        <td class="bg-grey-2">8,21</td>
-        <td>17</td>
-        <td>9</td>
-        <td>14</td>
-        <td>16</td>
-        <td>7</td>
-        <td></td>
-        <td>10</td>
-        <td>22</td>
-        <td>6</td>
-        <td>15</td>
-        <td class="bg-grey-2">5,18</td>
-        <td>зал</td>
+        <td class="cabinet-table__cell">6.</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,21</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell">6</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">5,18</td>
+        <td class="cabinet-table__cell">зал</td>
       </tr>
       <tr>
-        <td>7.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>10</td>
-        <td></td>
+        <td class="cabinet-table__cell">7.</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell"></td>
       </tr>
       <tr>
-        <td>с/к</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td colspan="3" class="special-lesson">22 Плаксина Т.Ю.</td>
-        <td colspan="2" class="special-lesson">12 Муращенкова М.С.</td>
-        <td colspan="3" class="special-lesson">9 Ярощук М.В.</td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td class="cabinet-table__cell">с/к</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td colspan="3" class="cabinet-table__cell abinet-table__table--special-lesson">22 Плаксина Т.Ю.</td>
+        <td colspan="2" class="cabinet-table__cell abinet-table__table--special-lesson">12 Муращенкова М.С.</td>
+        <td colspan="3" class="cabinet-table__cell abinet-table__table--special-lesson">9 Ярощук М.В.</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
       </tr>
       <tr>
-        <td>с/к</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td colspan="2" class="special-lesson">5 Широкова Л.В.</td>
-        <td colspan="1" class="special-lesson">6 Мацокина Г.Ф.</td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td class="cabinet-table__cell">с/к</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td colspan="2" class="cabinet-table__cell abinet-table__table--special-lesson">5 Широкова Л.В.</td>
+        <td colspan="1" class="cabinet-table__cell abinet-table__table--special-lesson">6 Мацокина Г.Ф.</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
       </tr>
       <tr>
-        <td>с/к</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td colspan="2" class="special-lesson">7 Демашова Ю.А.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td class="cabinet-table__cell">с/к</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td colspan="2" class="cabinet-table__cell abinet-table__table--special-lesson">7 Демашова Ю.А.</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
       </tr>
       <tr>
-        <td></td>
-        <td colspan="6">2-ая смена</td>
-        <td class="hide-cell"></td>
-        <td class="br-2">с/к</td>
-        <td class="br-2">спецкурс</td>
-        <td class="hide-cell"></td>
-        <td class="bg-blue br-2"> Инф.</td>
-        <td class="br-2">19</td>
-        <td colspan=3 class="br-2">Беспалова М.В.</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell" colspan="6">2-ая смена</td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__cell cabinet-table__table--border-2">с/к</td>
+        <td class="cabinet-table__cell cabinet-table__table--border-2">спецкурс</td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__cell cabinet-table__table--blue cabinet-table__table--border-2"> Инф.</td>
+        <td class="cabinet-table__cell cabinet-table__table--border-2">18</td>
+        <td colspan=3 class="cabinet-table__cell cabinet-table__table--border-2">Кошелев И.А.</td>
       </tr>
       <tr>
-        <td>№</td>
-        <td>6А</td>
-        <td>6Б</td>
-        <td>6В</td>
-        <td>7А</td>
-        <td>7Б</td>
-        <td>7В</td>
-        <td class="hide-cell"></td>
-        <td class="hide-cell"></td>
-        <td class="hide-cell"></td>
-        <td class="hide-cell"></td>
-        <td></td>
-        <td class="br-2">18</td>
-        <td colspan=3 class="br-2">Кошелев И.А.</td>
-      </tr>
-      <tr>
-        <td>1.</td>
-        <td>21</td>
-        <td>17</td>
-        <td class="bg-grey-2">8,19</td>
-        <td>14</td>
-        <td>20</td>
-        <td>16</td>
-        <td class="hide-cell"></td>
-        <td class="of-0 bg-grey-2">Англ. яз.</td>
-        <td class="of-0">8</td>
-        <td class="of-0 ta-l" colspan="4">Зыкина И.А.</td>
-      </tr>
-      <tr>
-        <td>2.</td>
-        <td class="bg-grey-2">8,19</td>
-        <td>17</td>
-        <td>15</td>
-        <td>14</td>
-        <td>16</td>
-        <td>20</td>
+        <td class="cabinet-table__cell">№</td>
+        <td class="cabinet-table__cell">6А</td>
+        <td class="cabinet-table__cell">6Б</td>
+        <td class="cabinet-table__cell">6В</td>
+        <td class="cabinet-table__cell">7А</td>
+        <td class="cabinet-table__cell">7Б</td>
+        <td class="cabinet-table__cell">7В</td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell cabinet-table__table--border-2">19</td>
+        <td colspan=3 class="cabinet-table__cell cabinet-table__table--border-2">Беспалова М.В.</td>
 
-        <td class="hide-cell"></td>
-        <td class="of-0"></td>
-        <td class="of-0">18</td>
-        <td class="of-0 ta-l" colspan="4">Сельверова Н.А.</td>
       </tr>
       <tr>
-        <td>3.</td>
-        <td>15</td>
-        <td class="bg-grey-2">8,21</td>
-        <td>20</td>
-        <td>17</td>
-        <td>16</td>
-        <td>14</td>
-        <td class="hide-cell"></td>
-        <td class="of-0"></td>
-        <td class="of-0">5,19</td>
-        <td class="of-0 ta-l" colspan="4">Байданова С.Г.</td>
+        <td class="cabinet-table__cell">1.</td>
+        <td class="cabinet-table__cell">21</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,19</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0 cabinet-table__table--grey">Англ. яз.</td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0">8</td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0 ta-l" colspan="4">Зыкина И.А.</td>
       </tr>
       <tr>
-        <td>4.</td>
-        <td>зал</td>
-        <td>7</td>
-        <td>17</td>
-        <td>15</td>
-        <td class="bg-blue">18,19</td>
-        <td>14</td>
-        <td class="hide-cell"></td>
-        <td class="of-0"></td>
-        <td class="of-0">4,7,21</td>
-        <td class="of-0 ta-l" colspan="4">Кайтанба М.В.</td>
+        <td class="cabinet-table__cell">2.</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,19</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">20</td>
+
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0">18</td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0 ta-l" colspan="4">Сельверова Н.А.</td>
       </tr>
       <tr>
-        <td>5.</td>
-        <td>15</td>
-        <td>зал</td>
-        <td>7</td>
-        <td class="bg-blue">18,19</td>
-        <td>14</td>
-        <td>17</td>
+        <td class="cabinet-table__cell">3.</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,21</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0">5,19</td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0 ta-l" colspan="4">Байданова С.Г.</td>
       </tr>
       <tr>
-        <td>6.</td>
-        <td>7</td>
-        <td>17</td>
-        <td>зал</td>
-        <td>15</td>
-        <td>14</td>
-        <td class="bg-blue">18,19</td>
+        <td class="cabinet-table__cell">4.</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell cabinet-table__table--blue">18,19</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0">4,7,21</td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0 ta-l" colspan="4">Кайтанба М.В.</td>
+      </tr>
+      <tr>
+        <td class="cabinet-table__cell">5.</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell cabinet-table__table--blue">18,19</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">17</td>
+      </tr>
+      <tr>
+        <td class="cabinet-table__cell">6.</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell cabinet-table__table--blue">18,19</td>
       </tr>
     </table>
   </div>
   <div class="day day-5">
-    <h1 class="day__title vh">пятница</h1>
+    <h1 class="cabinet-table__table-cell-day vh">пятница</h1>
     <table class="cabinet-table">
       <tr>
-        <td class="table-title-2" colspan="16">1-ая смена</td>
+        <td class="cabinet-table__cell cabinet-table__table-subtitle" colspan="16">1-ая смена</td>
       </tr>
       <tr>
-        <td>№</td>
-        <td>5А</td>
-        <td>5Б</td>
-        <td>5В</td>
-        <td>5Г</td>
-        <td>8А</td>
-        <td>8Б</td>
-        <td>8В</td>
-        <td>9А</td>
-        <td>9Б</td>
-        <td>10А</td>
-        <td>10Б</td>
-        <td>10В</td>
-        <td>11А</td>
-        <td>11Б</td>
-        <td>11В</td>
+        <td class="cabinet-table__cell">№</td>
+        <td class="cabinet-table__cell">5А</td>
+        <td class="cabinet-table__cell">5Б</td>
+        <td class="cabinet-table__cell">5В</td>
+        <td class="cabinet-table__cell">5Г</td>
+        <td class="cabinet-table__cell">8А</td>
+        <td class="cabinet-table__cell">8Б</td>
+        <td class="cabinet-table__cell">8В</td>
+        <td class="cabinet-table__cell">9А</td>
+        <td class="cabinet-table__cell">9Б</td>
+        <td class="cabinet-table__cell">10А</td>
+        <td class="cabinet-table__cell">10Б</td>
+        <td class="cabinet-table__cell">10В</td>
+        <td class="cabinet-table__cell">11А</td>
+        <td class="cabinet-table__cell">11Б</td>
+        <td class="cabinet-table__cell">11В</td>
       </tr>
       <tr>
-        <td class="cabinet-table__first-column">1.</td>
-        <td class="bg-grey-2">18,19</td>
-        <td>17</td>
-        <td>15</td>
-        <td>20</td>
-        <td>5</td>
-        <td>16</td>
-        <td>7</td>
-        <td>22</td>
-        <td>зал</td>
-        <td>10</td>
-        <td>12</td>
-        <td>21</td>
-        <td class="bg-orange" colspan="3">ко 2-му уроку</td>
+        <td class="cabinet-table__cell cabinet-table__first-column">1.</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">18,19</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell">21</td>
+        <td class="cabinet-table__cell cabinet-table__table--orange" colspan="3">ко 2-му уроку</td>
       </tr>
       <tr>
-        <td>2.</td>
-        <td>17</td>
-        <td class="bg-grey-2">18,19</td>
-        <td>15</td>
-        <td>16</td>
-        <td>7</td>
-        <td>22</td>
-        <td>20</td>
-        <td>21</td>
-        <td>8</td>
-        <td>6</td>
-        <td>12</td>
-        <td>10</td>
-        <td>зал</td>
-        <td>14</td>
-        <td>9</td>
+        <td class="cabinet-table__cell">2.</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">18,19</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">21</td>
+        <td class="cabinet-table__cell">8</td>
+        <td class="cabinet-table__cell">6</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">9</td>
       </tr>
       <tr>
-        <td>3.</td>
-        <td>17</td>
-        <td>16</td>
-        <td>7</td>
-        <td>21</td>
-        <td>5</td>
-        <td class="bg-blue">18,19</td>
-        <td>12</td>
-        <td class="bg-grey-2">8,9</td>
-        <td>20</td>
-        <td>15</td>
-        <td>10</td>
-        <td>6</td>
-        <td>22</td>
-        <td>14</td>
-        <td>зал</td>
+        <td class="cabinet-table__cell">3.</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">21</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell cabinet-table__table--blue">18,19</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,9</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell">6</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">зал</td>
       </tr>
       <tr>
-        <td>4.</td>
-        <td>16</td>
-        <td>17</td>
-        <td>21</td>
-        <td>14</td>
-        <td>20</td>
-        <td>7</td>
-        <td class="bg-blue">18,19</td>
-        <td>5</td>
-        <td class="bg-grey-2">8,22</td>
-        <td>15</td>
-        <td>9</td>
-        <td>12</td>
-        <td>10</td>
-        <td>зал</td>
-        <td>6</td>
+        <td class="cabinet-table__cell">4.</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">21</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell cabinet-table__table--blue">18,19</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,22</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">6</td>
       </tr>
       <tr>
-        <td>5.</td>
-        <td>20</td>
-        <td>14</td>
-        <td>17</td>
-        <td class="bg-grey-2">7,8</td>
-        <td>15</td>
-        <td>5</td>
-        <td>зал</td>
-        <td>12</td>
-        <td class="bg-blue">18,19</td>
-        <td>9</td>
-        <td>21</td>
-        <td>16</td>
-        <td>6</td>
-        <td>10</td>
-        <td>22</td>
+        <td class="cabinet-table__cell">5.</td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">7,8</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell cabinet-table__table--blue">18,19</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">21</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">6</td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell">22</td>
       </tr>
       <tr>
-        <td>6.</td>
-        <td>21</td>
-        <td></td>
-        <td class="bg-grey-2">8,16</td>
-        <td></td>
-        <td>15</td>
-        <td>14</td>
-        <td></td>
-        <td>20</td>
-        <td>5</td>
-        <td>7</td>
-        <td>10</td>
-        <td>9</td>
-        <td class="bg-grey-2">17,18</td>
-        <td>6</td>
-        <td>22</td>
+        <td class="cabinet-table__cell">6.</td>
+        <td class="cabinet-table__cell">21</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,16</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell">20</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">17,18</td>
+        <td class="cabinet-table__cell">6</td>
+        <td class="cabinet-table__cell">22</td>
       </tr>
       <tr>
-        <td>7.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>5</td>
-        <td></td>
-        <td></td>
-        <td>22</td>
-        <td>10</td>
-        <td class="bg-grey-2">18,21</td>
+        <td class="cabinet-table__cell">7.</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">18,21</td>
       </tr>
       <tr>
-        <td>с/к</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td colspan="3" class="special-lesson">10 Плаксина Т.Ю.</td>
-        <td></td>
-        <td class="special-lesson">12 Волков Н.С.</td>
-        <td colspan="2" class="special-lesson">6 Мацокина Г.Ф.</td>
-        <td></td>
-        <td colspan="2" class="special-lesson">22 Анурина О.А.</td>
-        <td></td>
+        <td class="cabinet-table__cell">с/к</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td colspan="3" class="cabinet-table__cell abinet-table__table--special-lesson">10 Плаксина Т.Ю.</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell abinet-table__table--special-lesson">12 Волков Н.С.</td>
+        <td colspan="2" class="cabinet-table__cell abinet-table__table--special-lesson">6 Мацокина Г.Ф.</td>
+        <td class="cabinet-table__cell"></td>
+        <td colspan="2" class="cabinet-table__cell abinet-table__table--special-lesson">22 Анурина О.А.</td>
+        <td class="cabinet-table__cell"></td>
       </tr>
       <tr>
-        <td></td>
-        <td colspan="6">2-ая смена</td>
-        <td class="hide-cell"></td>
-        <td class="br-2 ol-2">с/к</td>
-        <td class="br-2">спецкурс</td>
-        <td style="" class="hide-cell ol-2"></td>
-        <td class="bg-blue br-2"> Инф.</td>
-        <td class="br-2">19</td>
-        <td colspan=3 class="br-2">Беспалова М.В.</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell" colspan="6">2-ая смена</td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__cell cabinet-table__table--border-2 cabinet-table__table--outline-2">с/к</td>
+        <td class="cabinet-table__cell cabinet-table__table--border-2">спецкурс</td>
+        <td class="cabinet-table__table--hidden cabinet-table__table--outline-2"></td>
+        <td class="cabinet-table__cell cabinet-table__table--blue cabinet-table__table--border-2"> Инф.</td>
+        <td class="cabinet-table__cell cabinet-table__table--border-2">18</td>
+        <td colspan=3 class="cabinet-table__cell cabinet-table__table--border-2">Кошелев И.А.</td>
       </tr>
       <tr>
-        <td>№</td>
-        <td>6А</td>
-        <td>6Б</td>
-        <td>6В</td>
-        <td>7А</td>
-        <td>7Б</td>
-        <td>7В</td>
-        <td class="hide-cell"></td>
-        <td class="hide-cell"></td>
-        <td class="hide-cell"></td>
-        <td class="hide-cell"></td>
-        <td class="ol-2"></tdсд>
-        <td class="br-2">18</td>
-        <td colspan=3 class="br-2">Кошелев И.А.</td>
+        <td class="cabinet-table__cell">№</td>
+        <td class="cabinet-table__cell">6А</td>
+        <td class="cabinet-table__cell">6Б</td>
+        <td class="cabinet-table__cell">6В</td>
+        <td class="cabinet-table__cell">7А</td>
+        <td class="cabinet-table__cell">7Б</td>
+        <td class="cabinet-table__cell">7В</td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-2"></tdсд>
+        <td class="cabinet-table__cell cabinet-table__table--border-2">19</td>
+        <td colspan=3 class="cabinet-table__cell cabinet-table__table--border-2">Беспалова М.В.</td>
       </tr>
       <tr>
-        <td>1.</td>
-        <td>16</td>
-        <td>17</td>
-        <td>15</td>
-        <td class="bg-grey-2">7,8</td>
-        <td>22</td>
-        <td>9</td>
-        <td class="hide-cell"></td>
-        <td class="of-0 bg-grey-2 ol-2">Англ. яз.</td>
-        <td class="of-0 ol-2">8</td>
-        <td class="of-0 ta-l  ol-2" colspan="4">Зыкина И.А.</td>
+        <td class="cabinet-table__cell">1.</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">7,8</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0 cabinet-table__table--grey cabinet-table__table--outline-2">Англ. яз.</td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0 cabinet-table__table--outline-2">8</td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0 ta-l  cabinet-table__table--outline-2" colspan="4">Зыкина И.А.</td>
       </tr>
       <tr>
-        <td>2.</td>
-        <td>15</td>
-        <td class="bg-grey-2">7,8</td>
-        <td>16</td>
-        <td>зал</td>
-        <td>5</td>
-        <td>9</td>
-        <td class="hide-cell"></td>
-        <td class="of-0 ol-2"></td>
-        <td class="of-0">9,18,22</td>
-        <td class="of-0 ta-l" colspan="4">Сельверова Н.А.</td>
+        <td class="cabinet-table__cell">2.</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">7,8</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0">9,18,22</td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0 ta-l" colspan="4">Сельверова Н.А.</td>
       </tr>
       <tr>
-        <td>3.</td>
-        <td class="bg-grey-2">8,19</td>
-        <td>5</td>
-        <td>17</td>
-        <td>15</td>
-        <td>9</td>
-        <td>16</td>
-        <td class="hide-cell"></td>
-        <td class="of-0  ol-2"></td>
-        <td class="of-0">17</td>
-        <td class="of-0 ta-l" colspan="4">Байданова С.Г.</td>
+        <td class="cabinet-table__cell">3.</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,19</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0  cabinet-table__table--outline-2"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0">17</td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0 ta-l" colspan="4">Байданова С.Г.</td>
       </tr>
       <tr>
-        <td>4.</td>
-        <td>15</td>
-        <td>14</td>
-        <td class="bg-grey-2">8,19</td>
-        <td>9</td>
-        <td>7</td>
-        <td>зал</td>
-        <td class="hide-cell"></td>
-        <td class="of-0  ol-2"></td>
-        <td class="of-0">16,19</td>
-        <td class="of-0 ta-l" colspan="4">Кайтанба М.В.</td>
+        <td class="cabinet-table__cell">4.</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,19</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0  cabinet-table__table--outline-2"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0">16,19</td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0 ta-l" colspan="4">Кайтанба М.В.</td>
       </tr>
       <tr>
-        <td>5.</td>
-        <td>5</td>
-        <td>14</td>
-        <td>15</td>
-        <td>7</td>
-        <td>зал</td>
-        <td class="bg-grey-2">8,19</td>
+        <td class="cabinet-table__cell">5.</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">15</td>
+        <td class="cabinet-table__cell">7</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,19</td>
       </tr>
       <tr>
-        <td>6.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>5</td>
-        <td class="bg-grey-2">8,19</td>
-        <td>7</td>
+        <td class="cabinet-table__cell">6.</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,19</td>
+        <td class="cabinet-table__cell">7</td>
       </tr>
     </table>
   </div>
   <div class="day day-6">
-    <h1 class="day__title vh">суббота</h1>
+    <h1 class="cabinet-table__table-cell-day vh">суббота</h1>
     <table class="cabinet-table">
       <tr>
-        <td>№</td>
-        <td>8А</td>
-        <td>8Б</td>
-        <td>8В</td>
-        <td>9А</td>
-        <td>9Б</td>
-        <td>10А</td>
-        <td>10Б</td>
-        <td>10В</td>
-        <td>11А</td>
-        <td>11Б</td>
-        <td>11В</td>
+        <td class="cabinet-table__cell">№</td>
+        <td class="cabinet-table__cell">8А</td>
+        <td class="cabinet-table__cell">8Б</td>
+        <td class="cabinet-table__cell">8В</td>
+        <td class="cabinet-table__cell">9А</td>
+        <td class="cabinet-table__cell">9Б</td>
+        <td class="cabinet-table__cell">10А</td>
+        <td class="cabinet-table__cell">10Б</td>
+        <td class="cabinet-table__cell">10В</td>
+        <td class="cabinet-table__cell">11А</td>
+        <td class="cabinet-table__cell">11Б</td>
+        <td class="cabinet-table__cell">11В</td>
       </tr>
       <tr>
-        <td class="cabinet-table__first-column">1.</td>
-        <td>14</td>
-        <td class="bg-grey-2">8,18</td>
-        <td>9</td>
-        <td>5</td>
-        <td>17</td>
-        <td>10</td>
-        <td>зал</td>
-        <td>22</td>
-        <td class="bg-orange" colspan="3">ко 2-му уроку</td>
+        <td class="cabinet-table__cell cabinet-table__first-column">1.</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,18</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell cabinet-table__table--orange" colspan="3">ко 2-му уроку</td>
       </tr>
       <tr>
-        <td>2.</td>
-        <td>21</td>
-        <td>14</td>
-        <td>12</td>
-        <td>17</td>
-        <td class="bg-grey-2">8,18</td>
-        <td>зал</td>
-        <td>10</td>
-        <td>9</td>
-        <td>5</td>
-        <td>16</td>
-        <td>22</td>
+        <td class="cabinet-table__cell">2.</td>
+        <td class="cabinet-table__cell">21</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,18</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">22</td>
       </tr>
       <tr>
-        <td>3.</td>
-        <td class="bg-grey-2">8,19</td>
-        <td>12</td>
-        <td>16</td>
-        <td>9</td>
-        <td>17</td>
-        <td>22</td>
-        <td>18</td>
-        <td>10</td>
-        <td>зал</td>
-        <td>14</td>
-        <td>5</td>
+        <td class="cabinet-table__cell">3.</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,19</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell">18</td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">5</td>
       </tr>
       <tr>
-        <td>4.</td>
-        <td>12</td>
-        <td>16</td>
-        <td class="bg-grey-2">8,19</td>
-        <td>22</td>
-        <td>14</td>
-        <td>9</td>
-        <td>17</td>
-        <td>зал</td>
-        <td>10</td>
-        <td>5</td>
-        <td>21</td>
+        <td class="cabinet-table__cell">4.</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">8,19</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">21</td>
       </tr>
       <tr>
-        <td>5.</td>
-        <td>зал</td>
-        <td>17</td>
-        <td>14</td>
-        <td>12</td>
-        <td>21</td>
-        <td class="bg-grey-2">18,19</td>
-        <td>9</td>
-        <td>5</td>
-        <td>22</td>
-        <td class="bg-blue-2">16</td>
-        <td>10</td>
+        <td class="cabinet-table__cell">5.</td>
+        <td class="cabinet-table__cell">зал</td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">12</td>
+        <td class="cabinet-table__cell">21</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">18,19</td>
+        <td class="cabinet-table__cell">9</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell cabinet-table__table--blue-2">16</td>
+        <td class="cabinet-table__cell">10</td>
       </tr>
       <tr>
-        <td>6.</td>
-        <td></td>
-        <td>21</td>
-        <td></td>
-        <td>17</td>
-        <td>5</td>
-        <td>14</td>
-        <td>22</td>
-        <td></td>
-        <td class="bg-grey-2">18,19</td>
-        <td>10</td>
-        <td class="bg-blue-2">16</td>
+        <td class="cabinet-table__cell">6.</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell">21</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell">17</td>
+        <td class="cabinet-table__cell">5</td>
+        <td class="cabinet-table__cell">14</td>
+        <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">18,19</td>
+        <td class="cabinet-table__cell">10</td>
+        <td class="cabinet-table__cell cabinet-table__table--blue-2">16</td>
       </tr>
       <tr>
-        <td>7.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td class="bg-blue-2">16</td>
-        <td class="bg-grey-2">18,19</td>
-        <td>10</td>
+        <td class="cabinet-table__cell">7.</td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell"></td>
+        <td class="cabinet-table__cell cabinet-table__table--blue-2">16</td>
+        <td class="cabinet-table__cell cabinet-table__table--grey">18,19</td>
+        <td class="cabinet-table__cell">10</td>
       </tr>
       <tr>
-        <td colspan="16"></td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td colspan="2" class="cabinet-table__cell cabinet-table__table--outline-0 cabinet-table__table--outline-2 cabinet-table__table--grey">Англ. яз.</td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0">8</td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0 ta-c" colspan="2">Зыкина И.А.</td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td colspan="2" class="cabinet-table__cell cabinet-table__table--outline-2 cabinet-table__table--blue-2">Физхимия</td>
+        <td class="cabinet-table__cell">16</td>
+        <td class="cabinet-table__cell" colspan="3">Маркин А.В.</td>
       </tr>
       <tr>
-        <td class="hide-cell"></td>
-        <td colspan="2" class="of-0 ol-2 bg-grey-2">Англ. яз.</td>
-        <td class="of-0">8</td>
-        <td class="of-0 ta-c" colspan="2">Зыкина И.А.</td>
-        <td class="hide-cell"></td>
-        <td colspan="2" class="ol-2 bg-blue-2">Физхимия</td>
-        <td>16</td>
-        <td colspan="3">Маркин А.В.</td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td colspan="2" class="cabinet-table__table--outline-2"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0 cabinet-table__table--outline-2">18</td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0 ta-c" colspan="2">Сельверова Н.А.</td>
       </tr>
       <tr>
-        <td class="hide-cell"></td>
-        <td colspan="2" class="ol-2"></td>
-        <td class="of-0 ol-2">18</td>
-        <td class="of-0 ta-c" colspan="2">Сельверова Н.А.</td>
-      </tr>
-      <tr>
-        <td class="hide-cell"></td>
-        <td colspan="2" class="ol-2"></td>
-        <td class="of-0 ol-2">19</td>
-        <td class="of-0 ta-c" colspan="2">Байданова С.Г.</td>
+        <td class="cabinet-table__table--hidden"></td>
+        <td colspan="2" class="cabinet-table__table--outline-2"></td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0 cabinet-table__table--outline-2">19</td>
+        <td class="cabinet-table__cell cabinet-table__table--outline-0 ta-c" colspan="2">Байданова С.Г.</td>
       </tr>
     </table>
   </div>
@@ -1744,7 +1738,7 @@ td.ol-2 {
     //       }
     //     }
 
-    //     const dayTitles = document.querySelectorAll('.day__title');
+    //     const dayTitles = document.querySelectorAll('.cabinet-table__table-cell-day');
     //     dayTitles.forEach( item => {
     //       if (item.textContent === evt.target.textContent) {
     //         return item.parentElement.classList.toggle('hidden');
