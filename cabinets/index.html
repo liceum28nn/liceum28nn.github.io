@@ -1742,7 +1742,7 @@ td.ta-l {
 
     const setTime = () => {
        const nowTime = new Date();
-       document.querySelector('.js-now-time ').textContent = nowTime.toLocaleTimeString();
+       document.querySelector('.js-now-time ').textContent = nowTime.toLocaleTimeString().substr(0,8);
     };
 
     const updateTime = setInterval( setTime, 1000 );
