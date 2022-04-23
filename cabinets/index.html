@@ -229,7 +229,7 @@ td.ta-l {
 }
 
 .now-time {
-  font-size: 36px;
+  font-size: 48px;
   position: fixed;
   right: 0;
   top: 0;
@@ -1754,16 +1754,16 @@ td.ta-l {
 
     const setTime = () => {
        const nowTime = new Date();
-       let hh = nowTime.getHours();
-       let mm = nowTime.getMinutes();
-       let ss = nowTime.getSeconds();
+      //  let hh = nowTime.getHours();
+      //  let mm = nowTime.getMinutes();
+      //  let ss = nowTime.getSeconds();
 
-       if (hh < 10)  { hh = '0' + hh; }
-       if (mm < 10)  { mm = '0' + mm; }
-       if (ss < 10)  { ss = '0' + ss; }
+      //  if (hh < 10)  { hh = '0' + hh; }
+      //  if (mm < 10)  { mm = '0' + mm; }
+      //  if (ss < 10)  { ss = '0' + ss; }
 
-       document.querySelector('.js-now-time ').textContent  = `${hh}:${mm}:${ss}`
-      //  document.querySelector('.js-now-time ').textContent = nowTime.toLocaleTimeString('ru',optionsTime);
+      //  document.querySelector('.js-now-time ').textContent  = `${hh}:${mm}:${ss}`
+       document.querySelector('.js-now-time ').textContent = nowTime.toLocaleTimeString('ru',optionsTime);
     };
 
     const updateTime = setInterval( setTime, 1000 );
