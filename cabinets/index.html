@@ -1741,12 +1741,12 @@ td.ta-l {
   <script>
 
       const optionsTime = {
-        era: 'long',
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-        weekday: 'long',
-        timezone: 'UTC',
+        // era: 'short', //long
+        // year: 'numeric',
+        // month: 'long',
+        // day: 'numeric',
+        // weekday: 'long',
+        // timezone: 'UTC',
         hour: 'numeric',
         minute: 'numeric',
         second: 'numeric'
@@ -1754,7 +1754,7 @@ td.ta-l {
 
     const setTime = () => {
        const nowTime = new Date();
-       document.querySelector('.js-now-time ').textContent = nowTime.toLocaleTimeString('ru');
+       document.querySelector('.js-now-time ').textContent = nowTime.toLocaleTimeString('ru',optionsTime);
     };
 
     const updateTime = setInterval( setTime, 1000 );
