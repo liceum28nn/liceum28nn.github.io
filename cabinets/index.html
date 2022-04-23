@@ -20,7 +20,9 @@
 *::after,
 *::before {
   box-sizing: padding-box;
-  font-family: "Roboto","Times new roman", sans-serif;
+  font-family: 'Times New Roman', 'Roboto', arial;
+  /* "Central-Regular", arial; */
+  /* ,"Roboto","Times new roman", sans-serif; */
 }
 
 .vh,
@@ -243,7 +245,7 @@ td.ta-l {
 </head>
 <body class="page-body">
 
-  <span class="js-now-time now-time"></span>
+  <span class="js-now-time hidden now-time"></span>
 
   <input class="day__button day__button-1" type="radio" name="days" id="day-1" checked>
   <input class="day__button day__button-2" type="radio" name="days" id="day-2">
@@ -1763,12 +1765,14 @@ td.ta-l {
       //  if (ss < 10)  { ss = '0' + ss; }
 
       //  document.querySelector('.js-now-time ').textContent  = `${hh}:${mm}:${ss}`
-
+      if (document.querySelector('.js-now-time')) {
+        document.querySelector('.js-now-time ').classList.remove('hidden')
+      }
       if ( nowTime.getHours() < 10 ) {
         document.querySelector('.js-now-time ').textContent =`0${nowTime.toLocaleTimeString('ru',optionsTime)}`
         return;
       }
-       document.querySelector('.js-now-time ').textContent = nowTime.toLocaleTimeString('ru',optionsTime);
+       document.querySelector('.js-now-time').textContent = nowTime.toLocaleTimeString('ru',optionsTime);
     };
 
     const updateTime = setInterval( setTime, 1000 );
