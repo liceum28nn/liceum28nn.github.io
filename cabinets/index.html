@@ -228,11 +228,23 @@ td.ta-l {
   outline: 2px solid #000000;
 }
 
+.now-time {
+  font-size: 36px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+  border: 5px double #000000;
+  padding: 5px 10px;
+}
 
 
   </style>
 </head>
 <body class="page-body">
+
+  <span class="js-now-time now-time"></span>
+
   <input class="day__button day__button-1" type="radio" name="days" id="day-1" checked>
   <input class="day__button day__button-2" type="radio" name="days" id="day-2">
   <input class="day__button day__button-3" type="radio" name="days" id="day-3">
@@ -1727,6 +1739,14 @@ td.ta-l {
   </ul>
 
   <script>
+
+    const setTime = () => {
+       const nowTime = new Date();
+       document.querySelector('.js-now-time ').textContent = nowTime.toLocaleTimeString();
+    };
+
+    const updateTime = setInterval( setTime, 1000 );
+
     const url = `#day-${new Date().getDay()}`;
     if (document.querySelector(url)) {
       document.querySelector(url).checked = true;
