@@ -1754,7 +1754,16 @@ td.ta-l {
 
     const setTime = () => {
        const nowTime = new Date();
-       document.querySelector('.js-now-time ').textContent = nowTime.toLocaleTimeString('ru',optionsTime);
+       let hh = nowTime.getHours();
+       let mm = nowTime.getMinutes();
+       let ss = nowTime.getSeconds();
+
+       if (hh < 10)  { hh = '0' + hh; }
+       if (mm < 10)  { mm = '0' + mm; }
+       if (ss < 10)  { ss = '0' + ss; }
+
+       document.querySelector('.js-now-time ').textContent  = `${hh}:${mm}:${ss}`
+      //  document.querySelector('.js-now-time ').textContent = nowTime.toLocaleTimeString('ru',optionsTime);
     };
 
     const updateTime = setInterval( setTime, 1000 );
