@@ -1763,6 +1763,11 @@ td.ta-l {
       //  if (ss < 10)  { ss = '0' + ss; }
 
       //  document.querySelector('.js-now-time ').textContent  = `${hh}:${mm}:${ss}`
+
+      if ( nowTime.getHours() < 10 ) {
+        document.querySelector('.js-now-time ').textContent =`0${nowTime.toLocaleTimeString('ru',optionsTime)}`
+        return;
+      }
        document.querySelector('.js-now-time ').textContent = nowTime.toLocaleTimeString('ru',optionsTime);
     };
 
